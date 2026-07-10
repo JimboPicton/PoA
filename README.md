@@ -1,0 +1,17 @@
+# Principles of Animation Lab — Week 1
+
+An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
+
+## Run
+
+Open `index.html` directly in a modern browser. No build step or server is required.
+
+## Teaching flow
+
+1. Begin on **Timing** and alter the bounce beat and retained energy.
+2. Move to **Spacing**, enable **Show spacing**, pause, and step through individual frames.
+3. Compare even spacing, a soft ease, and gravity-based spacing without changing the impact timing.
+4. Move to **Squash & stretch** and compare the rubber, basketball, and bowling-ball presets.
+5. Use **A/B compare** to show a neutral baseline beside the current settings.
+
+The teaching interpretation is based on Richard Williams, *The Animator's Survival Kit*, “It’s All in the Timing and the Spacing,” printed pages 35–39 (PDF pages 42–46 in the supplied edition).

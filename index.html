@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Principles of Animation Lab — The Bouncing Ball</title>
+  <meta name="description" content="An interactive teaching utility for timing, spacing, slow in and out, and squash and stretch.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div><strong>Principles of Animation Lab</strong><span>Week 01 · The bouncing ball</span></div>
+    </div>
+    <button class="button ghost" id="resetAll">Reset lesson</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">Interactive demonstration</p>
+      <h1>The bounce says it all.</h1>
+      <p class="lede">Change one principle at a time. Watch the motion, pause on a frame, then reveal the spacing that created it.</p>
+      <div class="principle-tabs" role="tablist" aria-label="Teaching focus">
+        <button class="tab active" data-focus="timing">01 <span>Timing</span></button>
+        <button class="tab" data-focus="spacing">02 <span>Spacing</span></button>
+        <button class="tab" data-focus="squash">03 <span>Squash & stretch</span></button>
+      </div>
+    </section>
+
+    <section class="lab-grid">
+      <div class="stage-card">
+        <div class="stage-toolbar">
+          <div>
+            <span class="status-dot"></span>
+            <span id="motionLabel">Natural bounce</span>
+          </div>
+          <div class="toolbar-actions">
+            <label class="toggle"><input type="checkbox" id="onionToggle"><span></span>Show spacing</label>
+            <button class="icon-button" id="fullscreenBtn" aria-label="Expand stage" title="Expand stage">↗</button>
+          </div>
+        </div>
+        <div class="canvas-wrap" id="canvasWrap">
+          <canvas id="stage" aria-label="Animated bouncing ball demonstration"></canvas>
+          <div class="stage-note" id="stageNote"><strong>Timing</strong><span>The impact frames set the rhythm of the action.</span></div>
+        </div>
+        <div class="transport">
+          <button class="play-button" id="playBtn" aria-label="Pause animation">Ⅱ</button>
+          <button class="step-button" id="prevFrame" aria-label="Previous frame">‹</button>
+          <button class="step-button" id="nextFrame" aria-label="Next frame">›</button>
+          <div class="scrubber-wrap">
+            <input id="scrubber" type="range" min="0" max="143" value="0" aria-label="Animation frame">
+            <div class="scrubber-meta"><span id="frameReadout">Frame 001 / 144</span><span id="timeReadout">0.00 s</span></div>
+          </div>
+          <button class="button compare" id="compareBtn">A/B compare</button>
+        </div>
+      </div>
+
+      <aside class="controls-card">
+        <div class="panel-heading"><div><p class="eyebrow">Live controls</p><h2 id="controlTitle">Timing & rhythm</h2></div><button class="text-button" id="resetFocus">Reset</button></div>
+
+        <div class="preset-row" aria-label="Material presets">
+          <button class="preset active" data-preset="rubber">Rubber</button>
+          <button class="preset" data-preset="basketball">Basketball</button>
+          <button class="preset" data-preset="bowling">Bowling</button>
+        </div>
+
+        <div class="control-group" data-groups="timing">
+          <label for="tempo"><span>Bounce timing</span><output id="tempoOut">1.00 s</output></label>
+          <input id="tempo" type="range" min="0.55" max="1.8" step="0.05" value="1">
+          <div class="range-labels"><span>Quick / light</span><span>Slow / heavy</span></div>
+        </div>
+        <div class="control-group" data-groups="timing spacing">
+          <label for="decay"><span>Energy retained</span><output id="decayOut">72%</output></label>
+          <input id="decay" type="range" min="35" max="92" step="1" value="72">
+          <div class="range-labels"><span>Dies quickly</span><span>Keeps bouncing</span></div>
+        </div>
+        <div class="control-group" data-groups="spacing">
+          <label for="spacing"><span>Spacing model</span><output id="spacingOut">Gravity</output></label>
+          <input id="spacing" type="range" min="0" max="2" step="1" value="2">
+          <div class="segmented-labels"><span>Even</span><span>Soft</span><span>Gravity</span></div>
+        </div>
+        <div class="control-group" data-groups="squash">
+          <label for="squash"><span>Squash & stretch</span><output id="squashOut">32%</output></label>
+          <input id="squash" type="range" min="0" max="80" step="1" value="32">
+          <div class="range-labels"><span>Rigid</span><span>Elastic</span></div>
+        </div>
+        <div class="control-group" data-groups="squash">
+          <label for="impact"><span>Impact duration</span><output id="impactOut">3 fr</output></label>
+          <input id="impact" type="range" min="1" max="8" step="1" value="3">
+          <div class="range-labels"><span>Snappy</span><span>Soft</span></div>
+        </div>
+
+        <div class="question-card"><span>Ask the room</span><p id="promptText">If the impact frames stay fixed, what can spacing alone change?</p><button id="newPrompt">Another prompt →</button></div>
+      </aside>
+    </section>
+
+    <section class="readout-grid">
+      <article class="spacing-card">
+        <div class="card-heading"><div><p class="eyebrow">Frame map</p><h2>See the spacing</h2></div><div class="legend"><span><i class="dot slow"></i>Slow</span><span><i class="dot fast"></i>Fast</span></div></div>
+        <canvas id="spacingMap" aria-label="Diagram of sequential ball positions"></canvas>
+        <p class="caption">Close positions read as slow movement. Wide gaps read as fast movement. The frame rate has not changed.</p>
+      </article>
+      <article class="lesson-card">
+        <p class="eyebrow">Williams, in practice</p>
+        <h2 id="lessonTitle">Timing places the beats.</h2>
+        <p id="lessonCopy">The ground contacts are the accents of the action. Move those contacts closer together or farther apart and the rhythm—and apparent weight—changes.</p>
+        <div class="lesson-callout"><span>Try this</span><p id="tryThis">Drag <b>Bounce timing</b> from quick to slow. Notice that every drawing has more screen time, even before its path changes.</p></div>
+        <p class="source-note">Teaching interpretation based on <cite>The Animator's Survival Kit</cite>, “It’s All in the Timing and the Spacing,” pp. 35–39.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer><span>Week 01 · Introductory Animation</span><span>Space pauses. ← → steps frames.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
