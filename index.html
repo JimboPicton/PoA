@@ -11,7 +11,7 @@
   <header class="topbar">
     <div class="brand">
       <span class="brand-mark" aria-hidden="true"></span>
-      <div><strong>Principles of Animation Lab</strong><span>Week 01 · The bouncing ball · v1.2.0</span></div>
+      <div><strong>Principles of Animation Lab</strong><span>Week 01 · The bouncing ball · v1.3.0</span></div>
     </div>
     <button class="button ghost" id="resetAll">Reset lesson</button>
   </header>
@@ -67,10 +67,10 @@
         </div>
 
         <div class="control-group always-visible">
-          <label><span>Frame rate</span><output id="fpsOut">24 fps</output></label>
+          <label><span>Frame rate</span><output id="fpsOut">12 fps</output></label>
           <div class="choice-row" aria-label="Frame rate">
-            <button class="choice" data-fps="12">12 fps</button>
-            <button class="choice active" data-fps="24">24 fps</button>
+            <button class="choice active" data-fps="12">12 fps</button>
+            <button class="choice" data-fps="24">24 fps</button>
           </div>
           <div class="range-labels"><span>Traditional / on twos</span><span>Motion graphics</span></div>
         </div>
@@ -82,36 +82,36 @@
           </div>
         </div>
         <div class="control-group always-visible">
-          <label><span>Movement path</span><output id="pathOut">Arc</output></label>
+          <label><span>Movement path</span><output id="pathOut">Vertical</output></label>
           <div class="choice-row" aria-label="Movement path">
-            <button class="choice" data-path="vertical">Vertical</button>
-            <button class="choice active" data-path="arc">Editable arc</button>
+            <button class="choice active" data-path="vertical">Vertical</button>
+            <button class="choice" data-path="arc">Editable arc</button>
           </div>
           <p class="control-help" id="pathHelp">Drag the three path points on the stage to set the contacts and apex.</p>
         </div>
-        <div class="control-group always-visible" id="arcCountGroup">
+        <div class="control-group always-visible hidden" id="arcCountGroup">
           <label for="arcCount"><span>Arc bounces</span><output id="arcCountOut">3</output></label>
           <input id="arcCount" type="range" min="1" max="6" step="1" value="3">
           <div class="range-labels"><span>Single arc</span><span>Six bounces</span></div>
           <p class="control-help">Each generated arc retains the selected percentage of energy.</p>
         </div>
-        <div class="control-group always-visible hidden" id="verticalLoopGroup">
-          <label><span>Vertical bounce</span><output id="loopOut">Decaying</output></label>
+        <div class="control-group always-visible" id="verticalLoopGroup">
+          <label><span>Vertical bounce</span><output id="loopOut">Constant</output></label>
           <div class="choice-row" aria-label="Vertical bounce behaviour">
-            <button class="choice active" data-loop="decay">Decay</button>
-            <button class="choice" data-loop="constant">Constant height</button>
+            <button class="choice" data-loop="decay">Decay</button>
+            <button class="choice active" data-loop="constant">Constant height</button>
           </div>
           <p class="control-help">Constant height creates a seamless repeating exercise loop.</p>
         </div>
 
         <div class="control-group" data-groups="timing">
-          <label for="tempo"><span>Bounce timing</span><output id="tempoOut">1.00 s</output></label>
-          <input id="tempo" type="range" min="0.55" max="1.8" step="0.05" value="1">
+          <label for="tempo"><span>Bounce timing</span><output id="tempoOut">0.95 s</output></label>
+          <input id="tempo" type="range" min="0.55" max="1.8" step="0.05" value="0.95">
           <div class="range-labels"><span>Quick / light</span><span>Slow / heavy</span></div>
         </div>
         <div class="control-group" data-groups="timing spacing">
-          <label for="decay"><span>Energy retained</span><output id="decayOut">72%</output></label>
-          <input id="decay" type="range" min="35" max="92" step="1" value="72">
+          <label for="decay"><span>Energy retained</span><output id="decayOut">78%</output></label>
+          <input id="decay" type="range" min="35" max="92" step="1" value="78">
           <div class="range-labels"><span>Dies quickly</span><span>Keeps bouncing</span></div>
         </div>
         <div class="control-group" data-groups="spacing">
@@ -120,13 +120,13 @@
           <div class="segmented-labels"><span>Even</span><span>Soft</span><span>Gravity</span></div>
         </div>
         <div class="control-group" data-groups="squash">
-          <label for="squash"><span>Squash & stretch</span><output id="squashOut">32%</output></label>
-          <input id="squash" type="range" min="0" max="80" step="1" value="32">
+          <label for="squash"><span>Squash & stretch</span><output id="squashOut">48%</output></label>
+          <input id="squash" type="range" min="0" max="80" step="1" value="48">
           <div class="range-labels"><span>Rigid</span><span>Elastic</span></div>
         </div>
         <div class="control-group" data-groups="squash">
-          <label for="impact"><span>Impact duration</span><output id="impactOut">3 fr</output></label>
-          <input id="impact" type="range" min="1" max="8" step="1" value="3">
+          <label for="impact"><span>Impact duration</span><output id="impactOut">4 fr</output></label>
+          <input id="impact" type="range" min="1" max="8" step="1" value="4">
           <div class="range-labels"><span>Snappy</span><span>Soft</span></div>
         </div>
 
@@ -154,23 +154,23 @@
       <div class="question-intro">
         <p class="eyebrow">Source-bounded study help</p>
         <h2 id="questionTitle">Have a question?</h2>
-        <p>Ask about timing, spacing, slow in/out, weight, or squash and stretch. Answers use Richard Williams, <cite>The Animator's Survival Kit</cite>, printed pp. 35–39, then clearly contextualise or extrapolate those principles for your example.</p>
+        <p>Ask about timing, spacing, slow in/out, weight, or squash and stretch. You can also request a change, such as “Show me 24 fps,” “Use a bowling ball,” or “Increase the spacing.”</p>
       </div>
       <form class="question-form" id="studentQuestionForm">
         <label for="studentQuestion">Your question</label>
         <div class="question-entry">
-          <input id="studentQuestion" type="text" autocomplete="off" placeholder="Why are drawings closer together near the apex?" required>
+          <input id="studentQuestion" type="text" autocomplete="off" placeholder="Ask a question or request an animation change…" required>
           <button class="button" type="submit">Ask</button>
         </div>
         <div class="source-answer" id="sourceAnswer" aria-live="polite">
           <strong>Williams-grounded answers</strong>
-          <span>The panel may apply and extrapolate Williams' principles to your scenario, while identifying the relevant source pages.</span>
+          <span>I can explain Williams' principles and adjust recognised animation settings while we explore your question.</span>
         </div>
       </form>
     </section>
   </main>
 
-  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Week 01 · v1.2.0 · Space pauses · ← → steps frames</span></footer>
+  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Week 01 · v1.3.0 · Space pauses · ← → steps frames</span></footer>
   <script src="app.js"></script>
 </body>
 </html>

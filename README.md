@@ -1,6 +1,6 @@
 # Principles of Animation Lab — Week 1
 
-Current version: **1.2.0**
+Current version: **1.3.0**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
 
@@ -10,11 +10,12 @@ Open `index.html` directly in a modern browser. No build step or server is requi
 
 ## Teaching flow
 
-1. Begin on **Timing** and alter the bounce beat and retained energy.
-2. Move to **Spacing**, enable **Show spacing**, pause, and step through individual frames.
-3. Compare even spacing, a soft ease, and gravity-based spacing without changing the impact timing.
-4. Move to **Squash & stretch** and compare the rubber, basketball, and bowling-ball presets.
-5. Use **A/B compare** to show a neutral baseline beside the current settings.
+1. Begin with the default Week 1 exercise: **vertical**, **12 fps**, **rubber ball**, and **constant height**.
+2. On **Timing**, alter the bounce beat and retained energy.
+3. Move to **Spacing**, enable **Show spacing**, pause, and step through individual frames.
+4. Compare even spacing, a soft ease, and gravity-based spacing without changing the impact timing.
+5. Move to **Squash & stretch** and compare the rubber, basketball, and bowling-ball presets.
+6. Use **A/B compare** to show a neutral baseline beside the current settings.
 
 ## Frame rate and paths
 
@@ -40,3 +41,4 @@ The source-bounded question panel provides short, contextual teaching responses 
 - Collapse or restore **Live controls** with its hamburger dock without resetting the activity.
 - On desktop, the Williams lesson card is positioned in the right column and the frame map remains beneath the stage to reduce unnecessary scrolling.
 - Student questions may receive a contextual application or extrapolation, but each response remains grounded in Williams' printed pp. 35–39 and identifies itself as interpretation rather than quotation.
+- The question field also recognises common animation requests, including frame rate, playback speed, vertical or arc paths, constant or decaying height, material presets, spacing visibility, spacing amount, deformation, and arc count.
