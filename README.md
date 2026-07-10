@@ -1,6 +1,6 @@
 # Principles of Animation Lab — Week 1
 
-Current version: **1.7.0**
+Current version: **2.0.1**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
 
@@ -42,6 +42,9 @@ The source-bounded question panel provides short, contextual teaching responses 
 - Desktop Studio view uses three teaching columns: settings on the left, a reduced central stage with its frame map, and one combined **Williams, in Practice** guidance and questioning panel on the right.
 - Typography uses one sans-serif family throughout, with consistent display, section-heading, body, label, and caption levels.
 - The frame map is embedded as a dedicated row inside the stage card, preventing overlap at browser zoom levels.
+- The frame map is collapsed by default, opens with **Show spacing**, and can also be toggled independently as a stage drawer.
+- Secondary arc-count and bounce-decay controls now use an **Advanced settings** disclosure.
+- Williams answers remain hidden until a student submits a question, reducing visual noise in the default view.
 - Collapse or restore **Live controls** with its hamburger dock without resetting the activity.
 - On desktop, the Williams lesson card is positioned in the right column and the frame map remains beneath the stage to reduce unnecessary scrolling.
 - Student questions may receive a contextual application or extrapolation, but each response remains grounded in Williams' printed pp. 35–39 and identifies itself as interpretation rather than quotation.

@@ -30,7 +30,7 @@
 
     <div class="workspace-grid" id="workspaceGrid">
     <section class="lab-grid">
-      <div class="stage-card">
+      <div class="stage-card" id="stageCard">
         <div class="stage-toolbar">
           <div>
             <span class="status-dot"></span>
@@ -55,10 +55,12 @@
           </div>
           <button class="button compare" id="compareBtn">A/B compare</button>
         </div>
-        <article class="spacing-card embedded-spacing">
-          <div class="card-heading"><div><p class="eyebrow">Frame map</p><h2>See the spacing</h2></div><div class="legend"><span><i class="dot slow"></i>Slow</span><span><i class="dot fast"></i>Fast</span></div></div>
-          <canvas id="spacingMap" aria-label="Diagram of sequential ball positions"></canvas>
-          <p class="caption">Close positions read as slow movement. Wide gaps read as fast movement. The frame rate has not changed.</p>
+        <article class="spacing-card embedded-spacing drawer-collapsed" id="spacingDrawer">
+          <div class="card-heading"><div><p class="eyebrow">Frame map</p><h2>See the spacing</h2></div><div class="drawer-actions"><div class="legend"><span><i class="dot slow"></i>Slow</span><span><i class="dot fast"></i>Fast</span></div><button class="drawer-toggle" id="spacingDrawerToggle" aria-expanded="false" aria-controls="spacingContent">Show map</button></div></div>
+          <div class="spacing-content" id="spacingContent">
+            <canvas id="spacingMap" aria-label="Diagram of sequential ball positions"></canvas>
+            <p class="caption">Close positions read as slow movement. Wide gaps read as fast movement. The frame rate has not changed.</p>
+          </div>
         </article>
       </div>
 
@@ -94,6 +96,8 @@
           </div>
           <p class="control-help" id="pathHelp">Drag the three path points on the stage to set the contacts and apex.</p>
         </div>
+        <details class="advanced-controls" id="advancedControls">
+          <summary><span>Advanced settings</span><small>Arc count and bounce decay</small></summary>
         <div class="control-group always-visible hidden" id="arcCountGroup">
           <label for="arcCount"><span>Arc bounces</span><output id="arcCountOut">3</output></label>
           <input id="arcCount" type="range" min="1" max="6" step="1" value="3">
@@ -108,6 +112,7 @@
           </div>
           <p class="control-help">Constant height creates a seamless repeating exercise loop.</p>
         </div>
+        </details>
 
         <div class="control-group" data-groups="timing">
           <label for="tempo"><span>Bounce timing</span><output id="tempoOut">0.95 s</output></label>
@@ -156,7 +161,7 @@
               <input id="studentQuestion" type="text" autocomplete="off" placeholder="Ask a question or request a change…" required>
               <button class="button" type="submit">Ask</button>
             </div>
-            <div class="source-answer" id="sourceAnswer" aria-live="polite">
+            <div class="source-answer hidden" id="sourceAnswer" aria-live="polite">
               <strong>Williams-grounded answers</strong>
               <span>I can explain Williams' principles and adjust recognised animation settings while we explore your question.</span>
             </div>
