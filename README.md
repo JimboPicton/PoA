@@ -1,6 +1,6 @@
 # Principles of Animation Lab — Week 1
 
-Current version: **2.0.1**
+Current version: **2.0.2**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
 
