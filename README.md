@@ -1,6 +1,6 @@
 # Principles of Animation Lab — Week 1
 
-Current version: **1.1.0**
+Current version: **1.2.0**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
 
@@ -33,4 +33,10 @@ Activity references:
 - Spacing: printed pp. 35–39 (PDF pp. 42–46)
 - Squash & stretch: printed pp. 38–39 (PDF pp. 45–46)
 
-The source-bounded question panel provides short teaching responses only from this page range and declines unrelated questions. Teaching utility by Jim Picton, CQUniversity, informed by the work of Richard Williams.
+The source-bounded question panel provides short, contextual teaching responses grounded in this page range. Teaching utility by Jim Picton, CQUniversity, informed by the work of Richard Williams.
+
+## Interface
+
+- Collapse or restore **Live controls** with its hamburger dock without resetting the activity.
+- On desktop, the Williams lesson card is positioned in the right column and the frame map remains beneath the stage to reduce unnecessary scrolling.
+- Student questions may receive a contextual application or extrapolation, but each response remains grounded in Williams' printed pp. 35–39 and identifies itself as interpretation rather than quotation.

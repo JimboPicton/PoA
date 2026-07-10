@@ -11,7 +11,7 @@
   <header class="topbar">
     <div class="brand">
       <span class="brand-mark" aria-hidden="true"></span>
-      <div><strong>Principles of Animation Lab</strong><span>Week 01 · The bouncing ball · v1.1.0</span></div>
+      <div><strong>Principles of Animation Lab</strong><span>Week 01 · The bouncing ball · v1.2.0</span></div>
     </div>
     <button class="button ghost" id="resetAll">Reset lesson</button>
   </header>
@@ -28,6 +28,7 @@
       </div>
     </section>
 
+    <div class="workspace-grid" id="workspaceGrid">
     <section class="lab-grid">
       <div class="stage-card">
         <div class="stage-toolbar">
@@ -56,8 +57,8 @@
         </div>
       </div>
 
-      <aside class="controls-card">
-        <div class="panel-heading"><div><p class="eyebrow">Live controls</p><h2 id="controlTitle">Timing & rhythm</h2></div><button class="text-button" id="resetFocus">Reset</button></div>
+      <aside class="controls-card" id="controlsCard">
+        <div class="panel-heading"><div class="control-heading-copy"><p class="eyebrow">Live controls</p><h2 id="controlTitle">Timing & rhythm</h2></div><div class="panel-actions"><button class="text-button" id="resetFocus">Reset</button><button class="dock-button" id="controlsDockToggle" aria-label="Collapse live controls" aria-expanded="true" title="Collapse live controls"><span></span><span></span><span></span></button></div></div>
 
         <div class="preset-row" aria-label="Material presets">
           <button class="preset active" data-preset="rubber">Rubber</button>
@@ -147,12 +148,13 @@
         <p class="source-note" id="sourceNote">Further reading: Richard Williams, <cite>The Animator's Survival Kit</cite>, “It’s All in the Timing and the Spacing,” printed pp. 35–37.</p>
       </article>
     </section>
+    </div>
 
     <section class="question-panel" aria-labelledby="questionTitle">
       <div class="question-intro">
         <p class="eyebrow">Source-bounded study help</p>
         <h2 id="questionTitle">Have a question?</h2>
-        <p>Ask about timing, spacing, slow in/out, weight, or squash and stretch. Answers draw only on Richard Williams, <cite>The Animator's Survival Kit</cite>, printed pp. 35–39.</p>
+        <p>Ask about timing, spacing, slow in/out, weight, or squash and stretch. Answers use Richard Williams, <cite>The Animator's Survival Kit</cite>, printed pp. 35–39, then clearly contextualise or extrapolate those principles for your example.</p>
       </div>
       <form class="question-form" id="studentQuestionForm">
         <label for="studentQuestion">Your question</label>
@@ -161,14 +163,14 @@
           <button class="button" type="submit">Ask</button>
         </div>
         <div class="source-answer" id="sourceAnswer" aria-live="polite">
-          <strong>Williams-only answers</strong>
-          <span>If the question falls outside pp. 35–39, the panel will direct you back to your lecturer or the wider text.</span>
+          <strong>Williams-grounded answers</strong>
+          <span>The panel may apply and extrapolate Williams' principles to your scenario, while identifying the relevant source pages.</span>
         </div>
       </form>
     </section>
   </main>
 
-  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Week 01 · v1.1.0 · Space pauses · ← → steps frames</span></footer>
+  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Week 01 · v1.2.0 · Space pauses · ← → steps frames</span></footer>
   <script src="app.js"></script>
 </body>
 </html>
