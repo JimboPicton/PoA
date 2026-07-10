@@ -88,6 +88,12 @@
           </div>
           <p class="control-help" id="pathHelp">Drag the three path points on the stage to set the contacts and apex.</p>
         </div>
+        <div class="control-group always-visible" id="arcCountGroup">
+          <label for="arcCount"><span>Arc bounces</span><output id="arcCountOut">3</output></label>
+          <input id="arcCount" type="range" min="1" max="6" step="1" value="3">
+          <div class="range-labels"><span>Single arc</span><span>Six bounces</span></div>
+          <p class="control-help">Each generated arc retains the selected percentage of energy.</p>
+        </div>
         <div class="control-group always-visible hidden" id="verticalLoopGroup">
           <label><span>Vertical bounce</span><output id="loopOut">Decaying</output></label>
           <div class="choice-row" aria-label="Vertical bounce behaviour">
