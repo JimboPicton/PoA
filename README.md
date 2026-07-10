@@ -19,6 +19,7 @@ Open `index.html` directly in a modern browser. No build step or server is requi
 - Switch between **12 fps** and **24 fps** while preserving the action's duration in seconds. Frame stepping and the six-second timeline update to the selected rate.
 - Choose **Vertical** for a straight up-and-down bounce.
 - Choose **Editable arc**, select one to six bounces, and drag the overall start, first apex, and end handles. Intermediate contacts and progressively smaller arcs are generated from the energy-retention setting.
+- After the final generated arc, the ball settles onto the ground and rolls beyond the stage before the sequence repeats.
 - Use **¼ speed** to study contact, deformation, spacing, and recovery without changing the underlying frame rate.
 - In **Vertical** mode, choose **Constant height** for a perpetual looping exercise or **Decay** to demonstrate energy loss.
 
