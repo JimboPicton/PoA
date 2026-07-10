@@ -11,7 +11,7 @@
   <header class="topbar">
     <div class="brand">
       <span class="brand-mark" aria-hidden="true"></span>
-      <div><strong>Principles of Animation Lab</strong><span>Week 01 · The bouncing ball · v1.6.0</span></div>
+      <div><strong>Principles of Animation Lab</strong><span>Week 01 · The bouncing ball · v1.7.0</span></div>
     </div>
     <button class="button ghost" id="resetAll">Reset lesson</button>
   </header>
@@ -55,6 +55,11 @@
           </div>
           <button class="button compare" id="compareBtn">A/B compare</button>
         </div>
+        <article class="spacing-card embedded-spacing">
+          <div class="card-heading"><div><p class="eyebrow">Frame map</p><h2>See the spacing</h2></div><div class="legend"><span><i class="dot slow"></i>Slow</span><span><i class="dot fast"></i>Fast</span></div></div>
+          <canvas id="spacingMap" aria-label="Diagram of sequential ball positions"></canvas>
+          <p class="caption">Close positions read as slow movement. Wide gaps read as fast movement. The frame rate has not changed.</p>
+        </article>
       </div>
 
       <aside class="controls-card" id="controlsCard">
@@ -135,11 +140,6 @@
     </section>
 
     <section class="readout-grid">
-      <article class="spacing-card">
-        <div class="card-heading"><div><p class="eyebrow">Frame map</p><h2>See the spacing</h2></div><div class="legend"><span><i class="dot slow"></i>Slow</span><span><i class="dot fast"></i>Fast</span></div></div>
-        <canvas id="spacingMap" aria-label="Diagram of sequential ball positions"></canvas>
-        <p class="caption">Close positions read as slow movement. Wide gaps read as fast movement. The frame rate has not changed.</p>
-      </article>
       <article class="lesson-card">
         <p class="eyebrow">Williams, in practice</p>
         <h2 id="lessonTitle">Timing places the beats.</h2>
@@ -167,7 +167,7 @@
     </div>
   </main>
 
-  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Week 01 · v1.6.0 · Space pauses · ← → steps frames</span></footer>
+  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Week 01 · v1.7.0 · Space pauses · ← → steps frames</span></footer>
   <script src="app.js"></script>
 </body>
 </html>
