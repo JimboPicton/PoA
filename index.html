@@ -74,12 +74,27 @@
           <div class="range-labels"><span>Traditional / on twos</span><span>Motion graphics</span></div>
         </div>
         <div class="control-group always-visible">
+          <label><span>Playback speed</span><output id="speedOut">Normal</output></label>
+          <div class="choice-row" aria-label="Playback speed">
+            <button class="choice" data-speed="0.25">¼ speed</button>
+            <button class="choice active" data-speed="1">Normal</button>
+          </div>
+        </div>
+        <div class="control-group always-visible">
           <label><span>Movement path</span><output id="pathOut">Arc</output></label>
           <div class="choice-row" aria-label="Movement path">
             <button class="choice" data-path="vertical">Vertical</button>
             <button class="choice active" data-path="arc">Editable arc</button>
           </div>
           <p class="control-help" id="pathHelp">Drag the three path points on the stage to set the contacts and apex.</p>
+        </div>
+        <div class="control-group always-visible hidden" id="verticalLoopGroup">
+          <label><span>Vertical bounce</span><output id="loopOut">Decaying</output></label>
+          <div class="choice-row" aria-label="Vertical bounce behaviour">
+            <button class="choice active" data-loop="decay">Decay</button>
+            <button class="choice" data-loop="constant">Constant height</button>
+          </div>
+          <p class="control-help">Constant height creates a seamless repeating exercise loop.</p>
         </div>
 
         <div class="control-group" data-groups="timing">
