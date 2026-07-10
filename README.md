@@ -1,5 +1,7 @@
 # Principles of Animation Lab — Week 1
 
+Current version: **1.1.0**
+
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
 
 ## Run
@@ -24,3 +26,11 @@ Open `index.html` directly in a modern browser. No build step or server is requi
 - In **Vertical** mode, choose **Constant height** for a perpetual looping exercise or **Decay** to demonstrate energy loss.
 
 The teaching interpretation is based on Richard Williams, *The Animator's Survival Kit*, “It’s All in the Timing and the Spacing,” printed pages 35–39 (PDF pages 42–46 in the supplied edition).
+
+Activity references:
+
+- Timing: printed pp. 35–37 (PDF pp. 42–44)
+- Spacing: printed pp. 35–39 (PDF pp. 42–46)
+- Squash & stretch: printed pp. 38–39 (PDF pp. 45–46)
+
+The source-bounded question panel provides short teaching responses only from this page range and declines unrelated questions. Teaching utility by Jim Picton, CQUniversity, informed by the work of Richard Williams.
