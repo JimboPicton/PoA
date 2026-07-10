@@ -11,7 +11,7 @@
   <header class="topbar">
     <div class="brand">
       <span class="brand-mark" aria-hidden="true"></span>
-      <div><strong>Principles of Animation Lab</strong><span>Week 01 · The bouncing ball · v1.5.0</span></div>
+      <div><strong>Principles of Animation Lab</strong><span>Week 01 · The bouncing ball · v1.6.0</span></div>
     </div>
     <button class="button ghost" id="resetAll">Reset lesson</button>
   </header>
@@ -146,31 +146,28 @@
         <p id="lessonCopy">The ground contacts are the accents of the action. Move those contacts closer together or farther apart and the rhythm—and apparent weight—changes.</p>
         <div class="lesson-callout"><span>Try this</span><p id="tryThis">Drag <b>Bounce timing</b> from quick to slow. Notice that every drawing has more screen time, even before its path changes.</p></div>
         <p class="source-note" id="sourceNote">Further reading: Richard Williams, <cite>The Animator's Survival Kit</cite>, “It’s All in the Timing and the Spacing,” printed pp. 35–37.</p>
+        <div class="integrated-question" aria-labelledby="questionTitle">
+          <p class="eyebrow">Source-bounded study help</p>
+          <h3 id="questionTitle">Have a question?</h3>
+          <p>Ask about this topic or request an animation change, such as “Show me 24 fps” or “Increase the spacing.”</p>
+          <form class="question-form" id="studentQuestionForm">
+            <label for="studentQuestion">Your question</label>
+            <div class="question-entry">
+              <input id="studentQuestion" type="text" autocomplete="off" placeholder="Ask a question or request a change…" required>
+              <button class="button" type="submit">Ask</button>
+            </div>
+            <div class="source-answer" id="sourceAnswer" aria-live="polite">
+              <strong>Williams-grounded answers</strong>
+              <span>I can explain Williams' principles and adjust recognised animation settings while we explore your question.</span>
+            </div>
+          </form>
+        </div>
       </article>
-    </section>
-
-    <section class="question-panel" aria-labelledby="questionTitle">
-      <div class="question-intro">
-        <p class="eyebrow">Source-bounded study help</p>
-        <h2 id="questionTitle">Have a question?</h2>
-        <p>Ask about timing, spacing, slow in/out, weight, or squash and stretch. You can also request a change, such as “Show me 24 fps,” “Use a bowling ball,” or “Increase the spacing.”</p>
-      </div>
-      <form class="question-form" id="studentQuestionForm">
-        <label for="studentQuestion">Your question</label>
-        <div class="question-entry">
-          <input id="studentQuestion" type="text" autocomplete="off" placeholder="Ask a question or request an animation change…" required>
-          <button class="button" type="submit">Ask</button>
-        </div>
-        <div class="source-answer" id="sourceAnswer" aria-live="polite">
-          <strong>Williams-grounded answers</strong>
-          <span>I can explain Williams' principles and adjust recognised animation settings while we explore your question.</span>
-        </div>
-      </form>
     </section>
     </div>
   </main>
 
-  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Week 01 · v1.5.0 · Space pauses · ← → steps frames</span></footer>
+  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Week 01 · v1.6.0 · Space pauses · ← → steps frames</span></footer>
   <script src="app.js"></script>
 </body>
 </html>
