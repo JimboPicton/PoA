@@ -14,4 +14,10 @@ Open `index.html` directly in a modern browser. No build step or server is requi
 4. Move to **Squash & stretch** and compare the rubber, basketball, and bowling-ball presets.
 5. Use **A/B compare** to show a neutral baseline beside the current settings.
 
+## Frame rate and paths
+
+- Switch between **12 fps** and **24 fps** while preserving the action's duration in seconds. Frame stepping and the six-second timeline update to the selected rate.
+- Choose **Vertical** for a straight up-and-down bounce.
+- Choose **Editable arc** and drag the start, apex, and end handles directly on the stage. The ball alternates direction along the defined arc on successive bounces.
+
 The teaching interpretation is based on Richard Williams, *The Animator's Survival Kit*, “It’s All in the Timing and the Spacing,” printed pages 35–39 (PDF pages 42–46 in the supplied edition).

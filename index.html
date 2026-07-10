@@ -65,6 +65,23 @@
           <button class="preset" data-preset="bowling">Bowling</button>
         </div>
 
+        <div class="control-group always-visible">
+          <label><span>Frame rate</span><output id="fpsOut">24 fps</output></label>
+          <div class="choice-row" aria-label="Frame rate">
+            <button class="choice" data-fps="12">12 fps</button>
+            <button class="choice active" data-fps="24">24 fps</button>
+          </div>
+          <div class="range-labels"><span>Traditional / on twos</span><span>Motion graphics</span></div>
+        </div>
+        <div class="control-group always-visible">
+          <label><span>Movement path</span><output id="pathOut">Arc</output></label>
+          <div class="choice-row" aria-label="Movement path">
+            <button class="choice" data-path="vertical">Vertical</button>
+            <button class="choice active" data-path="arc">Editable arc</button>
+          </div>
+          <p class="control-help" id="pathHelp">Drag the three path points on the stage to set the contacts and apex.</p>
+        </div>
+
         <div class="control-group" data-groups="timing">
           <label for="tempo"><span>Bounce timing</span><output id="tempoOut">1.00 s</output></label>
           <input id="tempo" type="range" min="0.55" max="1.8" step="0.05" value="1">
