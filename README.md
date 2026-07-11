@@ -1,6 +1,6 @@
-# Principles of Animation Lab — Week 1
+# DGTL11001 Foundations of Animation: Principles of Animation Lab — Weeks 1-2
 
-Current version: **2.3.1**
+Current version: **2.3.2**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
 
