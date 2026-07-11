@@ -1,6 +1,6 @@
 # DGTL11001 Foundations of Animation: Principles of Animation Lab — Weeks 1-2
 
-Current version: **2.5.0**
+Current version: **2.6.0**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
 
@@ -48,6 +48,7 @@ The source-bounded question panel provides short, contextual teaching responses 
 - Week 1 and Week 2 Google Slides are linked from the Williams panel, and question responses recommend the relevant presentation by week.
 - The spacing drawer now renders paired, dynamically numbered timing charts for impact-to-apex and apex-to-impact, informed by Brian LeMay's perpetual-bounce example and Williams' timing/spacing discussion.
 - The study helper uses the Clip Studio 2D animation guide to clarify drawing exposure (ones, twos, threes and fours), frame rate, keyframes, breakdowns, in-betweens, onion skinning and the wider principles workflow.
+- Preston Blair's book now informs answers about bouncing-ball paths, numbered drawings, contact, recoil, weight, extremes, in-betweens and follow-through; the O'Reilly edition is linked for CQU student access.
 - **Explain motion** slows playback to quarter speed, reveals spacing/onion information, and labels the key, fast-spacing, slow-in, apex, slow-out, and fast-fall phases directly on the motion path.
 - Collapse or restore **Live controls** with its hamburger dock without resetting the activity.
 - On desktop, the Williams lesson card is positioned in the right column and the frame map remains beneath the stage to reduce unnecessary scrolling.
