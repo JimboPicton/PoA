@@ -1,6 +1,6 @@
 # Principles of Animation Lab — Week 1
 
-Current version: **2.1.0**
+Current version: **2.2.0**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
 
@@ -46,6 +46,7 @@ The source-bounded question panel provides short, contextual teaching responses 
 - Secondary arc-count and bounce-decay controls now use an **Advanced settings** disclosure.
 - Williams answers remain hidden until a student submits a question, reducing visual noise in the default view.
 - Week 1 and Week 2 Google Slides are linked from the Williams panel, and question responses recommend the relevant presentation by week.
+- The spacing drawer now renders paired, dynamically numbered timing charts for impact-to-apex and apex-to-impact, informed by Brian LeMay's perpetual-bounce example and Williams' timing/spacing discussion.
 - Collapse or restore **Live controls** with its hamburger dock without resetting the activity.
 - On desktop, the Williams lesson card is positioned in the right column and the frame map remains beneath the stage to reduce unnecessary scrolling.
 - Student questions may receive a contextual application or extrapolation, but each response remains grounded in Williams' printed pp. 35–39 and identifies itself as interpretation rather than quotation.
