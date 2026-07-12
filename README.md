@@ -59,5 +59,5 @@ The source-bounded question panel provides short, contextual teaching responses 
 
 ## Standalone activities
 
-- `week3.html` demonstrates a tailless ball anticipating, jumping over a central box, landing and recovering. It includes separate controls for anticipation amount and duration, overall exaggeration, takeoff stretch, landing squash and follow-through recovery.
+- `week3.html` demonstrates a tailless ball anticipating, jumping over a central box, landing and recovering. It includes separate controls for anticipation amount and duration, overall exaggeration, takeoff stretch, landing squash and follow-through recovery. Students can drag the launch marker to rebuild the arc from a nearer or farther starting position, and use Explain motion for labelled quarter-speed study.
 - `week4.html` demonstrates follow-through and overlapping action with a three-section flexible tail. It includes collapsible principle groups and material presets.
