@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DGTL11001 Week 4 Lab — Follow Through & Overlapping Action</title>
+  <meta name="description" content="An interactive Week 4 animation lab demonstrating follow through and overlapping action with a tailed bouncing ball.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="week4.css">
+</head>
+<body class="week4-page">
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 4 · Follow through & overlapping action · v1.0.0</span></div></div>
+    <button class="button ghost" id="resetAll">Reset activity</button>
+  </header>
+
+  <main>
+    <section class="intro week4-intro">
+      <p class="eyebrow">Standalone interactive demonstration</p>
+      <h1>The tail tells us what happened.</h1>
+      <p class="lede">The ball leads the action. The flexible tail responds later, continues after the ball changes direction, and settles last.</p>
+      <div class="principle-tabs" aria-label="Week 4 learning sequence">
+        <button class="tab active" data-focus="follow">01 <span>Follow through</span></button>
+        <button class="tab" data-focus="overlap">02 <span>Overlap</span></button>
+        <button class="tab" data-focus="settle">03 <span>Settle</span></button>
+      </div>
+    </section>
+
+    <div class="week4-grid">
+      <section class="stage-card week4-stage">
+        <div class="stage-toolbar">
+          <div><span class="status-dot"></span><span id="motionLabel">Anticipation on the box</span></div>
+          <div class="toolbar-actions">
+            <label class="toggle"><input type="checkbox" id="arcToggle" checked><span></span>Show path</label>
+            <label class="toggle"><input type="checkbox" id="onionToggle"><span></span>Show phases</label>
+            <label class="toggle"><input type="checkbox" id="explainToggle"><span></span>Explain action</label>
+            <button class="icon-button" id="fullscreenBtn" aria-label="Expand stage" title="Expand stage">↗</button>
+          </div>
+        </div>
+        <div class="canvas-wrap week4-canvas" id="canvasWrap">
+          <canvas id="stage" aria-label="A ball with a flexible tail leaping from a box and landing on the ground"></canvas>
+          <div class="stage-note"><strong id="phaseTitle">ANTICIPATION</strong><span id="phaseNote">The body prepares. The tail has not yet received the full force.</span></div>
+        </div>
+        <div class="transport">
+          <button class="play-button" id="playBtn" aria-label="Pause animation">Ⅱ</button>
+          <button class="step-button" id="prevFrame" aria-label="Previous frame">‹</button>
+          <button class="step-button" id="nextFrame" aria-label="Next frame">›</button>
+          <div class="scrubber-wrap"><input id="scrubber" type="range" min="0" max="35" value="0" aria-label="Animation frame"><div class="scrubber-meta"><span id="frameReadout">Frame 01 / 36</span><span id="timeReadout">0.00 s</span></div></div>
+          <button class="button compare" id="compareBtn">Compare rigid tail</button>
+        </div>
+      </section>
+
+      <aside class="controls-card week4-controls">
+        <div class="panel-heading"><div><p class="eyebrow">Live controls</p><h2>Tail response</h2></div><button class="text-button" id="resetControls">Reset</button></div>
+        <div class="control-group"><label><span>Frame rate</span><output id="fpsOut">12 fps</output></label><div class="choice-row"><button class="choice active" data-fps="12">12 fps</button><button class="choice" data-fps="24">24 fps</button></div></div>
+        <div class="control-group"><label><span>Playback speed</span><output id="speedOut">Normal</output></label><div class="choice-row"><button class="choice" data-speed="0.25">¼ speed</button><button class="choice active" data-speed="1">Normal</button></div></div>
+        <div class="control-group"><label for="delay"><span>Tail delay</span><output id="delayOut">3 frames</output></label><input id="delay" type="range" min="0" max="7" value="3"><div class="range-labels"><span>Moves together</span><span>Responds later</span></div><p class="control-help">Delay separates the primary action of the ball from the secondary response of the tail.</p></div>
+        <div class="control-group"><label for="flex"><span>Tail flexibility</span><output id="flexOut">68%</output></label><input id="flex" type="range" min="10" max="100" value="68"><div class="range-labels"><span>Stiff</span><span>Flexible</span></div></div>
+        <div class="control-group"><label for="overlap"><span>Overlapping drag</span><output id="overlapOut">72%</output></label><input id="overlap" type="range" min="0" max="100" value="72"><div class="range-labels"><span>Tracks body</span><span>Strong drag</span></div></div>
+        <div class="control-group"><label for="settle"><span>Landing settle</span><output id="settleOut">6 frames</output></label><input id="settle" type="range" min="2" max="12" value="6"><div class="range-labels"><span>Quick stop</span><span>Long follow through</span></div></div>
+        <div class="control-group"><label for="height"><span>Leap height</span><output id="heightOut">64%</output></label><input id="height" type="range" min="35" max="90" value="64"><div class="range-labels"><span>Low arc</span><span>High arc</span></div></div>
+        <div class="question-card"><span>Ask the room</span><p id="promptText">When the ball changes direction, which part should change direction last?</p><button id="newPrompt">Another prompt →</button></div>
+      </aside>
+
+      <article class="lesson-card week4-lesson">
+        <p class="eyebrow">Williams and Blair, in practice</p>
+        <h2 id="lessonTitle">The body leads. The tail catches up.</h2>
+        <p id="lessonCopy">Follow through is the continuation of flexible parts after the main body changes speed or direction. Overlapping action means those parts do not start, stop, or reverse at exactly the same time.</p>
+        <div class="lesson-callout"><span>Try this</span><p id="tryThis">Set Tail delay to zero, then raise it to three frames. Watch the launch, apex and landing. Which version feels more flexible?</p></div>
+        <p class="source-note">Study alongside Richard Williams’ discussion of flexibility, successive breaking of joints and overlapping action. Preston Blair also advises that parts should arrive at different times and that loose parts require clear follow-through (printed pp. 128, 134 and 221).</p>
+        <div class="phase-key"><span><i class="phase-dot primary"></i>Primary action: ball</span><span><i class="phase-dot secondary"></i>Secondary action: tail</span></div>
+      </article>
+
+      <article class="spacing-card week4-map-card">
+        <div class="card-heading"><div><p class="eyebrow">Action breakdown</p><h2>See the delay</h2></div><div class="legend"><span><i class="dot fast"></i>Ball beat</span><span><i class="dot slow"></i>Tail beat</span></div></div>
+        <canvas id="actionMap" aria-label="Timeline comparing the ball action and delayed tail action"></canvas>
+        <p class="caption">The tail’s important changes occur after the ball’s. Increase Tail delay to separate the two rows.</p>
+      </article>
+    </div>
+  </main>
+  <footer><span>Jim Picton, CQUniversity · Informed by Richard Williams and Preston Blair</span><span>Week 4 · v1.0.0 · Space pauses · ← → steps frames</span></footer>
+  <script src="week4.js"></script>
+</body>
+</html>
