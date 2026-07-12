@@ -56,3 +56,8 @@ The source-bounded question panel provides short, contextual teaching responses 
 - On desktop, the Williams lesson card is positioned in the right column and the frame map remains beneath the stage to reduce unnecessary scrolling.
 - Student questions may receive a contextual application or extrapolation, but each response remains grounded in Williams' printed pp. 35–39 and identifies itself as interpretation rather than quotation.
 - The question field also recognises common animation requests, including frame rate, playback speed, vertical or arc paths, constant or decaying height, material presets, spacing visibility, spacing amount, deformation, and arc count.
+
+## Standalone activities
+
+- `week3.html` demonstrates a tailless ball anticipating, jumping over a central box, landing and recovering. It includes separate controls for anticipation amount and duration, overall exaggeration, takeoff stretch, landing squash and follow-through recovery.
+- `week4.html` demonstrates follow-through and overlapping action with a three-section flexible tail. It includes collapsible principle groups and material presets.
