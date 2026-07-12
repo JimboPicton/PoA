@@ -10,7 +10,7 @@
 </head>
 <body class="week4-page">
   <header class="topbar">
-    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 4 · Follow through & overlapping action · v1.3.0</span></div></div>
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 4 · Follow through & overlapping action · v1.4.0</span></div></div>
     <button class="button ghost" id="resetAll">Reset activity</button>
   </header>
 
@@ -51,14 +51,14 @@
       </section>
 
       <aside class="controls-card week4-controls">
-        <div class="panel-heading"><div><p class="eyebrow">Live controls</p><h2>Tail response</h2></div><button class="text-button" id="resetControls">Reset</button></div>
+        <div class="panel-heading"><div><p class="eyebrow">Follow-through & overlapping action</p><h2>Tail response</h2></div><button class="text-button" id="resetControls">Reset</button></div>
         <div class="preset-row" aria-label="Ball material presets"><button class="preset active" data-preset="rubber">Rubber</button><button class="preset" data-preset="basketball">Basketball</button><button class="preset" data-preset="bowling">Bowling</button></div>
         <div class="control-group"><label><span>Frame rate</span><output id="fpsOut">12 fps</output></label><div class="choice-row"><button class="choice active" data-fps="12">12 fps</button><button class="choice" data-fps="24">24 fps</button></div></div>
         <div class="control-group"><label><span>Playback speed</span><output id="speedOut">Normal</output></label><div class="choice-row"><button class="choice" data-speed="0.25">¼ speed</button><button class="choice active" data-speed="1">Normal</button></div></div>
-        <div class="control-group"><label for="delay"><span>Tail delay</span><output id="delayOut">3 frames</output></label><input id="delay" type="range" min="0" max="7" value="3"><div class="range-labels"><span>Moves together</span><span>Responds later</span></div><p class="control-help">Delay separates the primary action of the ball from the secondary response of the tail.</p></div>
-        <div class="control-group"><label for="flex"><span>Tail flexibility</span><output id="flexOut">68%</output></label><input id="flex" type="range" min="10" max="100" value="68"><div class="range-labels"><span>Stiff</span><span>Flexible</span></div></div>
-        <div class="control-group"><label for="overlap"><span>Overlapping drag</span><output id="overlapOut">72%</output></label><input id="overlap" type="range" min="0" max="100" value="72"><div class="range-labels"><span>Tracks body</span><span>Strong drag</span></div></div>
-        <div class="control-group"><label for="settle"><span>Landing settle</span><output id="settleOut">6 frames</output></label><input id="settle" type="range" min="2" max="12" value="6"><div class="range-labels"><span>Quick stop</span><span>Long follow through</span></div></div>
+        <div class="control-group"><label for="delay"><span>Overlapping-action delay</span><output id="delayOut">3 frames</output></label><input id="delay" type="range" min="0" max="7" value="3"><div class="range-labels"><span>Moves together</span><span>Responds later</span></div><p class="control-help">Overlapping action separates the primary movement of the ball from the later response of the tail.</p></div>
+        <div class="control-group"><label for="flex"><span>Follow-through flexibility</span><output id="flexOut">68%</output></label><input id="flex" type="range" min="10" max="100" value="68"><div class="range-labels"><span>Rigid follow-through</span><span>Flexible follow-through</span></div><p class="control-help">Flexible parts continue moving after the ball changes speed or direction.</p></div>
+        <div class="control-group"><label for="overlap"><span>Overlapping-action drag</span><output id="overlapOut">72%</output></label><input id="overlap" type="range" min="0" max="100" value="72"><div class="range-labels"><span>Tracks the ball</span><span>Strong overlap</span></div><p class="control-help">The base, middle and tip should not reverse direction on the same frame.</p></div>
+        <div class="control-group"><label for="settle"><span>Follow-through settle</span><output id="settleOut">6 frames</output></label><input id="settle" type="range" min="2" max="12" value="6"><div class="range-labels"><span>Quick follow-through</span><span>Extended follow-through</span></div><p class="control-help">After landing, the tail overshoots, passes through neutral and settles last.</p></div>
         <div class="control-group"><label for="height"><span>Leap height</span><output id="heightOut">64%</output></label><input id="height" type="range" min="35" max="90" value="64"><div class="range-labels"><span>Low arc</span><span>High arc</span></div></div>
         <div class="question-card"><span>Ask the room</span><p id="promptText">When the ball changes direction, which part should change direction last?</p><button id="newPrompt">Another prompt →</button></div>
       </aside>
@@ -75,11 +75,11 @@
       <article class="spacing-card week4-map-card">
         <div class="card-heading"><div><p class="eyebrow">Action breakdown</p><h2>See the delay</h2></div><div class="legend"><span><i class="dot fast"></i>Ball beat</span><span><i class="dot slow"></i>Tail beat</span></div></div>
         <canvas id="actionMap" aria-label="Timeline comparing the ball action and delayed tail action"></canvas>
-        <p class="caption">The tail’s important changes occur after the ball’s. Increase Tail delay to separate the two rows.</p>
+        <p class="caption">Overlapping action offsets the tail beats from the ball beats. Increase Overlapping-action delay to separate the two rows.</p>
       </article>
     </div>
   </main>
-  <footer><span>Jim Picton, CQUniversity · Informed by Richard Williams and Preston Blair</span><span>Week 4 · v1.3.0 · Space pauses · ← → steps frames</span></footer>
+  <footer><span>Jim Picton, CQUniversity · Informed by Richard Williams and Preston Blair</span><span>Week 4 · v1.4.0 · Space pauses · ← → steps frames</span></footer>
   <script src="week4.js"></script>
 </body>
 </html>
