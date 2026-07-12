@@ -10,7 +10,7 @@
 </head>
 <body class="week4-page">
   <header class="topbar">
-    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 4 · Follow through & overlapping action · v1.7.0</span></div></div>
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 4 · Follow through & overlapping action · v1.9.0</span></div></div>
     <button class="button ghost" id="resetAll">Reset activity</button>
   </header>
 
@@ -57,7 +57,7 @@
         <div class="control-group"><label><span>Playback speed</span><output id="speedOut">Normal</output></label><div class="choice-row"><button class="choice" data-speed="0.25">¼ speed</button><button class="choice active" data-speed="1">Normal</button></div></div>
         <div class="control-group"><label for="delay"><span>Overlapping-action delay</span><output id="delayOut">3 frames</output></label><input id="delay" type="range" min="0" max="7" value="3"><div class="range-labels"><span>Moves together</span><span>Responds later</span></div><p class="control-help">Overlapping action separates the primary movement of the ball from the later response of the tail.</p></div>
         <div class="control-group"><label for="flex"><span>Follow-through flexibility</span><output id="flexOut">68%</output></label><input id="flex" type="range" min="10" max="100" value="68"><div class="range-labels"><span>Rigid follow-through</span><span>Flexible follow-through</span></div><p class="control-help">Flexible parts continue moving after the ball changes speed or direction.</p></div>
-        <div class="control-group"><label for="overlap"><span>Overlapping-action drag</span><output id="overlapOut">72%</output></label><input id="overlap" type="range" min="0" max="100" value="72"><div class="range-labels"><span>Tracks the ball</span><span>Strong overlap</span></div><p class="control-help">The base, middle and tip should not reverse direction on the same frame.</p></div>
+        <div class="control-group"><label for="overlap"><span>Overlapping-action drag</span><output id="overlapOut">72%</output></label><input id="overlap" type="range" min="0" max="100" value="72"><div class="range-labels"><span>Tracks the ball</span><span>Strong overlap</span></div><p class="control-help">Three hidden sections—base, middle and tip—inherit the action progressively later.</p></div>
         <div class="control-group"><label for="settle"><span>Follow-through settle</span><output id="settleOut">6 frames</output></label><input id="settle" type="range" min="2" max="12" value="6"><div class="range-labels"><span>Quick follow-through</span><span>Extended follow-through</span></div><p class="control-help">After landing, the tail overshoots, passes through neutral and settles last.</p></div>
         <div class="control-group"><label for="height"><span>Launch energy / apex</span><output id="heightOut">64%</output></label><input id="height" type="range" min="35" max="90" value="64"><div class="range-labels"><span>Low launch</span><span>High launch</span></div><p class="control-help">The launch velocity changes, but downward acceleration remains Earth gravity: 9.81 m/s².</p></div>
         <div class="question-card"><span>Ask the room</span><p id="promptText">When the ball changes direction, which part should change direction last?</p><button id="newPrompt">Another prompt →</button></div>
@@ -73,10 +73,10 @@
         <div class="integrated-question week4-question" aria-labelledby="week4QuestionTitle">
           <p class="eyebrow">Resource-grounded study help</p>
           <h3 id="week4QuestionTitle">Have a question?</h3>
-          <p>Ask about follow-through, overlapping action, tail poses, material or the action diagram.</p>
+          <p>Ask about principles covered in Weeks 1–5, including timing, spacing, squash and stretch, follow-through, overlapping action, anticipation and exaggeration.</p>
           <form class="question-form" id="week4QuestionForm">
             <label for="week4Question">Your question</label>
-            <div class="question-entry"><input id="week4Question" type="text" autocomplete="off" placeholder="Ask a Week 4 question…" required><button class="button" type="submit">Ask</button></div>
+            <div class="question-entry"><input id="week4Question" type="text" autocomplete="off" placeholder="Ask a question about Weeks 1–5…" required><button class="button" type="submit">Ask</button></div>
             <div class="source-answer hidden" id="week4Answer" aria-live="polite"><strong>Week 4 answer</strong><span></span><div class="answer-resources" id="week4AnswerResources"></div></div>
           </form>
         </div>
@@ -89,7 +89,7 @@
       </article>
     </div>
   </main>
-  <footer><span>Jim Picton, CQUniversity · Informed by Richard Williams and Preston Blair</span><span>Week 4 · v1.7.0 · Earth gravity 9.81 m/s² · Space pauses · ← → steps frames</span></footer>
+  <footer><span>Jim Picton, CQUniversity · Informed by Richard Williams and Preston Blair</span><span>Week 4 · v1.9.0 · Earth gravity 9.81 m/s² · Space pauses · ← → steps frames</span></footer>
   <script src="week4.js"></script>
 </body>
 </html>
