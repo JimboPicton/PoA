@@ -6,12 +6,13 @@
   <title>DGTL11001 Foundations of Animation: Principles of Animation Lab</title>
   <meta name="description" content="An interactive teaching utility for timing, spacing, slow in and out, and squash and stretch.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="activities.css">
 </head>
-<body>
+<body class="activities-page">
   <header class="topbar">
     <div class="brand">
       <span class="brand-mark" aria-hidden="true"></span>
-      <div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 1: Squash and Stretch, Slow In and Slow Out, Timing (and Spacing) | Week 2: Staging &amp; Arcs</span></div>
+      <div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Weeks 1–4 · Principles activity navigator</span></div>
     </div>
     <button class="button ghost" id="resetAll">Reset lesson</button>
   </header>
@@ -21,11 +22,14 @@
       <p class="eyebrow">Interactive demonstration</p>
       <h1>The bounce says it all.</h1>
       <p class="lede">Change one principle at a time. Watch the motion, pause on a frame, then reveal the spacing that created it.</p>
-      <div class="principle-tabs" role="tablist" aria-label="Teaching focus">
-        <button class="tab active" data-focus="timing">01 <span>Timing</span></button>
-        <button class="tab" data-focus="spacing">02 <span>Spacing</span></button>
-        <button class="tab" data-focus="squash">03 <span>Squash & stretch</span></button>
-      </div>
+      <nav class="principle-tabs activity-tabs" aria-label="Weeks 1 to 4 activities">
+        <button class="tab" data-focus="squash">01 <span>Squash &amp; Stretch</span></button>
+        <button class="tab" data-focus="spacing">02 <span>Slow in and out</span></button>
+        <button class="tab active" data-focus="timing">03 <span>Timing &amp; Spacing</span></button>
+        <a class="activity-link" href="week3.html?focus=anticipation">04 <span>Anticipation</span></a>
+        <a class="activity-link" href="week3.html?focus=exaggeration">05 <span>Exaggeration</span></a>
+        <a class="activity-link" href="week4.html?focus=follow">06 <span>Follow-through</span></a>
+      </nav>
     </section>
 
     <div class="workspace-grid" id="workspaceGrid">
@@ -183,7 +187,8 @@
     </div>
   </main>
 
-  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Weeks 1-2 · v1.7.0 · Space pauses · ← → steps frames</span></footer>
+  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams</span><span>Weeks 1–4 · Activity navigator · Space pauses · ← → steps frames</span></footer>
   <script src="app.js?v=2.7.1"></script>
 </body>
 </html>
+

@@ -2,13 +2,15 @@
 
 Current version: **2.7.1**
 
-An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, and squash/stretch.
+An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, squash/stretch, anticipation, exaggeration, and follow-through.
 
-Standalone Week 4 activity: open `week4.html` to explore follow through and overlapping action with a tailed ball leaping from a box. It is intentionally not linked from the Weeks 1–2 student page yet.
+Open `activities.html` for the combined Weeks 1–4 activity navigator. It keeps the Weeks 1–2 laboratory controls on one page and links directly to the relevant Week 3 and Week 4 principle demonstrations.
+
+Standalone pages remain available: `index.html` for Weeks 1–2, `week3.html` for anticipation and exaggeration, and `week4.html` for follow-through and overlapping action.
 
 ## Run
 
-Open `index.html` directly in a modern browser. No build step or server is required.
+Open `activities.html` or any standalone activity page directly in a modern browser. No build step or server is required.
 
 ## Teaching flow
 
