@@ -1,6 +1,6 @@
 # DGTL11001 Foundations of Animation: Principles of Animation Lab — Weeks 1-2
 
-Current version: **2.7.3**
+Current version: **2.8.0**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, squash/stretch, anticipation, exaggeration, and follow-through.
 
@@ -38,7 +38,7 @@ Activity references:
 - Spacing: printed pp. 35–39 (PDF pp. 42–46)
 - Squash & stretch: printed pp. 38–39 (PDF pp. 45–46)
 
-The source-bounded question panel provides short, contextual teaching responses grounded in this page range. Teaching utility by Jim Picton, CQUniversity, informed by the work of Richard Williams.
+The study-help panel uses a topic index derived from the full supplied texts of Richard Williams and Preston Blair. It provides short, contextual paraphrases with relevant PDF page references, while the current activity and weekly resources help students apply the answer.
 
 ## Interface
 
@@ -56,7 +56,7 @@ The source-bounded question panel provides short, contextual teaching responses 
 - **Explain motion** slows playback to quarter speed, reveals spacing/onion information, and labels the key, fast-spacing, slow-in, apex, slow-out, and fast-fall phases directly on the motion path.
 - Collapse or restore **Live controls** with its hamburger dock without resetting the activity.
 - On desktop, the Williams lesson card is positioned in the right column and the frame map remains beneath the stage to reduce unnecessary scrolling.
-- Student questions may receive a contextual application or extrapolation, but each response remains grounded in Williams' printed pp. 35–39 and identifies itself as interpretation rather than quotation.
+- Student questions receive concise paraphrases drawn from a broad topic index of the supplied Williams and Blair texts. Each response identifies relevant PDF pages and connects the answer to the current activity where possible.
 - The question field also recognises common animation requests, including frame rate, playback speed, vertical or arc paths, constant or decaying height, material presets, spacing visibility, spacing amount, deformation, and arc count.
 
 ## Standalone activities
