@@ -1,12 +1,12 @@
 # DGTL11001 Foundations of Animation: Principles of Animation Lab — Weeks 1-2
 
-Current version: **2.8.0**
+Current version: **2.9.0**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, squash/stretch, anticipation, exaggeration, and follow-through.
 
 Open `activities.html` for the combined Weeks 1–4 activity navigator. It keeps the Weeks 1–2 laboratory controls on one page and links directly to the relevant Week 3 and Week 4 principle demonstrations.
 
-Standalone pages remain available: `index.html` for Weeks 1–2, `week3.html` for anticipation and exaggeration, and `week4.html` for follow-through and overlapping action.
+Standalone pages remain available: `index.html` for the Week 1 entry point, `week2.html` for the Arcs & Staging entry point, `week3.html` for anticipation and exaggeration, and `week4.html` for follow-through and overlapping action.
 
 ## Run
 
