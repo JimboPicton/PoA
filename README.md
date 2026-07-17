@@ -1,6 +1,6 @@
 # DGTL11001 Foundations of Animation: Principles of Animation Lab — Weeks 1-2
 
-Current version: **2.9.1**
+Current version: **2.9.2**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, squash/stretch, anticipation, exaggeration, and follow-through.
 
@@ -26,7 +26,7 @@ Open `activities.html` or any standalone activity page directly in a modern brow
 - Switch between **12 fps** and **24 fps** while preserving the action's duration in seconds. Frame stepping and the six-second timeline update to the selected rate.
 - Choose **Vertical** for a straight up-and-down bounce.
 - Choose **Arcs & Staging**, select one to six bounces, and drag the overall start, first apex, and end handles. Each generated rebound loses both height and horizontal travel, resolving toward the ground before the final roll. The activity opens with the five-arc Rubber teaching setup shown in the Week 2 lesson.
-- The dedicated `week2.html` entry point opens with an arcs-and-staging theory panel explaining paths of action, momentum, diminishing bounce energy, composition, visual clarity and space in the direction of travel.
+- The dedicated `week2.html` entry point opens with an arcs-and-staging theory panel explaining paths of action, momentum, diminishing bounce energy, composition, visual clarity and space in the direction of travel. Its fourth principle tab returns students directly to this Week 2 focus.
 - After the final generated arc, the ball settles onto the ground and rolls beyond the stage before the sequence repeats.
 - Use **¼ speed** to study contact, deformation, spacing, and recovery without changing the underlying frame rate.
 - In **Vertical** mode, choose **Constant height** for a perpetual looping exercise or **Decay** to demonstrate energy loss.

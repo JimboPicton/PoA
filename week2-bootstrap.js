@@ -2,6 +2,7 @@
   'use strict';
 
   function applyWeek2Theory() {
+    document.querySelectorAll('.principle-tabs .tab').forEach(tab => tab.classList.toggle('active', tab.id === 'week2ArcsTab'));
     document.getElementById('lessonTitle').textContent = 'Arcs guide the movement. Staging guides the eye.';
     document.getElementById('lessonCopy').textContent = 'Most organic action travels along a curved path. The arc should make direction, momentum and the gradual loss of energy easy to read. Staging arranges the ball, ground, path and empty space so the audience notices the important action without confusion.';
     document.getElementById('tryThis').innerHTML = 'Drag the <b>first apex</b> and <b>end</b> handles. Keep every contact on the ground, make each bounce smaller, and leave clear space in the direction of travel. Then hide the path and check that the action still reads.';
@@ -26,6 +27,12 @@
   const openArcActivity = arcButton.onclick;
   arcButton.onclick = () => {
     openArcActivity();
+    applyWeek2Theory();
+  };
+
+  document.getElementById('week2ArcsTab').onclick = () => {
+    setPath('arc');
+    document.getElementById('advancedControls').open = true;
     applyWeek2Theory();
   };
 }());
