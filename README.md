@@ -62,5 +62,5 @@ The study-help panel uses a topic index derived from the full supplied texts of 
 
 ## Standalone activities
 
-- `week3.html` demonstrates a tailless ball anticipating, jumping over a central box, landing and recovering. It includes separate controls for anticipation amount and duration, overall exaggeration, takeoff stretch, landing squash and follow-through recovery. Students can drag the launch marker to rebuild the arc from a nearer or farther starting position, and use Explain motion for labelled quarter-speed study.
-- `week4.html` demonstrates follow-through and overlapping action with a three-section flexible tail. It includes collapsible principle groups and material presets.
+- `week3.html` demonstrates a tailless ball anticipating, jumping over a central box, preparing for landing with a progressively angled oval pose, landing and recovering. It includes separate controls for anticipation amount and duration, overall exaggeration, takeoff stretch, landing squash and follow-through recovery. Students can drag the launch marker to rebuild the arc from a nearer or farther starting position, and use Explain motion for labelled quarter-speed study.
+- `week4.html` demonstrates follow-through and overlapping action with a three-section flexible tail. From frame 18, the ball progressively stretches along its descending motion path while the tail attachment follows the transformed ball boundary. It includes collapsible principle groups and material presets.
