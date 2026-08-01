@@ -3,6 +3,17 @@ const cumulativeDefaults={cumulativeSquash:48,bounceTiming:.95,spacingModel:2,en
 const cumulativeControls=Object.fromEntries(Object.keys(cumulativeDefaults).map(id=>[id,$('#'+id)]));
 const focusedPhysics=physics,focusedFlightFrames=flightFrames,focusedMotionAt=motionAt,focusedReset=reset;
 
+Object.assign(lessons,{
+  squash:['Shape follows force.','Squash shows compression at takeoff and impact. Stretch supports fast movement. Preserve the ball’s apparent volume so the changing shape communicates force without changing its mass.','Compare Rubber with Bowling while keeping the timing and path unchanged. Which material can support more deformation?'],
+  timing:['Timing places the important beats.','Timing determines when anticipation, takeoff, apex and impact occur. More frames lengthen the action; fewer frames make those same beats arrive sooner and alter the apparent weight.','Change Bounce timing while leaving Gravity spacing selected. Watch the frame numbers move without changing the staged purpose of the jump.'],
+  spacing:['Spacing describes speed between drawings.','Close drawings show slower movement; wider gaps show faster movement. Gravity creates close spacing near the apex and increasingly wide spacing as the ball accelerates toward landing.','Compare Even, Soft ease and Gravity while keeping Bounce timing unchanged. Which version communicates weight most clearly?'],
+  arcs:['The path stages the action.','A clear arc gives the jump flow and makes its direction easy to read. Staging keeps the box, apex and landing separated so the audience can understand the action at a glance.','Turn on Show phases. Adjust Jump height until the silhouettes clear the box while still feeling connected to the landing point.'],
+  anticipation:['Preparation makes the action readable.','Anticipation moves against the main action before takeoff. The ball compresses and shifts first, giving the audience time to understand its intention and the force about to be released.','Reduce Anticipation to zero, then restore it. Does the jump feel less intentional without the preparatory pose?'],
+  exaggeration:['Push the idea, not every part.','Exaggeration strengthens the clearest idea in the action. It can push the preparation, takeoff stretch, apex or landing reaction while the underlying arc and weight remain believable.','Increase Exaggeration at quarter speed. Identify the point where the action becomes clearer and the point where it begins to lose its material identity.'],
+  follow:['The body leads. The tail catches up.','Follow-through continues the movement of flexible parts after the ball changes speed or direction. The tail should continue through landing and settle after the primary action.','Reduce Tail flexibility, then increase it. Watch which version carries the landing force beyond the ball’s contact frame.'],
+  overlap:['Different parts carry different timing.','Overlapping action prevents the tail from behaving as one rigid shape. Its base responds first, followed by the middle and tip, creating a travelling change of direction.','Set Action delay to zero, then increase it. Step through the frames and locate the delayed response from the tail base to its tip.']
+});
+
 function cumulativeValue(id){return +cumulativeControls[id].value}
 function equalArcProgress(progress,ph){
   const samples=48,points=[],lengths=[0];let total=0;
@@ -42,6 +53,8 @@ motionAt=function(f){
     state.squash*=shape*exaggeration;
     if(state.landingStretch)state.landingStretch*=shape*exaggeration
   }
+  state.squash=clamp(state.squash,-.72,.82);
+  if(state.landingStretch)state.landingStretch=clamp(state.landingStretch,0,.8);
   state.cumulativeEnergy=retained;
   return state
 };
@@ -58,12 +71,4 @@ function syncCumulative(){updateCumulativeLabels();frame=clamp(frame,0,totalFram
 function resetCumulative(){for(const [id,value] of Object.entries(cumulativeDefaults))cumulativeControls[id].value=value;focusedReset();updateCumulativeLabels();sync()}
 Object.values(cumulativeControls).forEach(control=>control.addEventListener('input',syncCumulative));
 $('#resetAll').onclick=$('#resetControls').onclick=resetCumulative;
-$('#cumulativeDockToggle').onclick=()=>{
-  const panel=$('#cumulativeControlsPanel'),collapsed=panel.classList.toggle('collapsed');
-  $('#cumulativeGrid').classList.toggle('cumulative-panel-collapsed',collapsed);
-  $('#cumulativeDockToggle').setAttribute('aria-expanded',String(!collapsed));
-  $('#cumulativeDockToggle').setAttribute('aria-label',collapsed?'Expand animation settings':'Collapse animation settings');
-  $('#cumulativeDockToggle').title=collapsed?'Expand animation settings':'Collapse animation settings';
-  requestAnimationFrame(resize)
-};
 updateCumulativeLabels();sync();

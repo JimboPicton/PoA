@@ -11,23 +11,18 @@
 </head>
 <body class="week4-page cumulative-week4-page">
   <header class="topbar">
-    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 4 extension · Principles in combination · v1.0.0</span></div></div>
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 4 extension · Principles in combination · v1.1.1</span></div></div>
     <button class="button ghost" id="resetAll">Reset activity</button>
   </header>
 
   <main>
     <section class="intro week4-intro">
       <p class="eyebrow">Cumulative interactive demonstration</p>
-      <h1>Make every principle work together.</h1>
+      <h1>Bringing it all together.</h1>
       <p class="lede">Experiment with the principles introduced across Weeks 1–4 while the ball and tail complete one staged box jump.</p>
-      <div class="principle-tabs" aria-label="Week 4 learning sequence">
-        <button class="tab active" data-focus="follow">01 <span>Follow-through</span></button>
-        <button class="tab" data-focus="overlap">02 <span>Overlap</span></button>
-        <button class="tab" data-focus="settle">03 <span>Settle</span></button>
-      </div>
     </section>
 
-    <div class="week4-grid cumulative-panel-collapsed" id="cumulativeGrid">
+    <div class="week4-grid" id="cumulativeGrid">
       <section class="stage-card week4-stage">
         <div class="stage-toolbar">
           <div><span class="status-dot"></span><span id="motionLabel">Anticipation on the box</span></div>
@@ -51,45 +46,66 @@
         </div>
       </section>
 
-      <aside class="controls-card week4-controls cumulative-controls collapsed" id="cumulativeControlsPanel">
-        <div class="panel-heading"><div class="cumulative-heading-copy"><p class="eyebrow">Weeks 1–4 animation settings</p><h2>Combined performance</h2></div><div class="panel-actions"><button class="text-button" id="resetControls">Reset</button><button class="dock-button" id="cumulativeDockToggle" aria-label="Expand animation settings" aria-expanded="false" title="Expand animation settings"><span></span><span></span><span></span></button></div></div>
+      <aside class="controls-card week4-controls cumulative-controls" id="cumulativeControlsPanel">
+        <div class="panel-heading"><div class="cumulative-heading-copy"><p class="eyebrow">Weeks 1–4 animation settings</p><h2>Combined performance</h2></div><button class="text-button" id="resetControls">Reset</button></div>
         <div class="preset-row" aria-label="Ball material presets"><button class="preset active" data-preset="rubber">Rubber</button><button class="preset" data-preset="basketball">Basketball</button><button class="preset" data-preset="bowling">Bowling</button></div>
         <div class="control-group"><label><span>Frame rate</span><output id="fpsOut">12 fps</output></label><div class="choice-row"><button class="choice active" data-fps="12">12 fps</button><button class="choice" data-fps="24">24 fps</button></div></div>
         <div class="control-group"><label><span>Playback speed</span><output id="speedOut">Normal</output></label><div class="choice-row"><button class="choice" data-speed="0.25">¼ speed</button><button class="choice active" data-speed="1">Normal</button></div></div>
 
-        <details class="advanced-controls principle-group cumulative-principles" id="cumulativePrinciples">
-          <summary><span>Weeks 1–3 principles</span><small>Open cumulative controls</small></summary>
-          <p class="cumulative-intro">Adjust one principle at a time, then combine them. The ball completes one staged arc only.</p>
-          <h3>Week 1 · Shape, timing & spacing</h3>
+        <p class="cumulative-intro">Select a principle heading to reveal its settings. Change one principle at a time, then combine them.</p>
+        <details class="advanced-controls principle-group cumulative-principles">
+          <summary><span>Squash & stretch</span><small>Week 1 · Shape & force</small></summary>
           <div class="control-group"><label for="cumulativeSquash"><span>Squash & stretch</span><output id="cumulativeSquashOut">48%</output></label><input id="cumulativeSquash" type="range" min="0" max="100" value="48"><div class="range-labels"><span>Rigid</span><span>Elastic</span></div></div>
+        </details>
+        <details class="advanced-controls principle-group cumulative-principles">
+          <summary><span>Timing</span><small>Week 1 · Duration & beats</small></summary>
           <div class="control-group"><label for="bounceTiming"><span>Bounce timing</span><output id="bounceTimingOut">0.95 s</output></label><input id="bounceTiming" type="range" min="0.65" max="1.40" step="0.05" value="0.95"><div class="range-labels"><span>Quick</span><span>Slow</span></div></div>
+        </details>
+        <details class="advanced-controls principle-group cumulative-principles">
+          <summary><span>Spacing</span><small>Week 1 · Frame intervals</small></summary>
           <div class="control-group"><label for="spacingModel"><span>Spacing model</span><output id="spacingModelOut">Gravity</output></label><input id="spacingModel" type="range" min="0" max="2" step="1" value="2"><div class="segmented-labels"><span>Even</span><span>Soft</span><span>Gravity</span></div></div>
-          <h3>Week 2 · Arcs & staging</h3>
+        </details>
+        <details class="advanced-controls principle-group cumulative-principles">
+          <summary><span>Arcs & staging</span><small>Week 2 · Path & clarity</small></summary>
           <div class="control-group"><label for="energyRetained"><span>Energy retained</span><output id="energyRetainedOut">84%</output></label><input id="energyRetained" type="range" min="35" max="95" value="84"><div class="range-labels"><span>Stops quickly</span><span>Keeps moving</span></div><p class="control-help">Controls how much movement continues through impact and recovery. This exercise uses one arc, so there is no arc-count control.</p></div>
-          <h3>Week 3 · Performance</h3>
+        </details>
+        <details class="advanced-controls principle-group cumulative-principles">
+          <summary><span>Anticipation</span><small>Week 3 · Preparation</small></summary>
           <div class="control-group"><label for="anticipationAmount"><span>Anticipation</span><output id="anticipationAmountOut">58%</output></label><input id="anticipationAmount" type="range" min="0" max="100" value="58"><div class="range-labels"><span>Subtle</span><span>Strong preparation</span></div></div>
+        </details>
+        <details class="advanced-controls principle-group cumulative-principles">
+          <summary><span>Exaggeration</span><small>Week 3 · Push the action</small></summary>
           <div class="control-group"><label for="exaggerationAmount"><span>Exaggeration</span><output id="exaggerationAmountOut">65%</output></label><input id="exaggerationAmount" type="range" min="0" max="100" value="65"><div class="range-labels"><span>Restrained</span><span>Pushed</span></div></div>
           <div class="control-group"><label for="height"><span>Jump height / staging</span><output id="heightOut">54%</output></label><input id="height" type="range" min="35" max="90" value="54"><div class="range-labels"><span>Low arc</span><span>High arc</span></div><p class="control-help">Stages the action clearly above the box while Earth gravity remains 9.81 m/s².</p></div>
         </details>
-
-        <details class="advanced-controls principle-group" open>
-          <summary><span>Overlapping action</span><small>Delay & travelling drag</small></summary>
-          <div class="control-group"><label for="delay"><span>Action delay</span><output id="delayOut">3 frames</output></label><input id="delay" type="range" min="0" max="7" value="3"><div class="range-labels"><span>Moves together</span><span>Responds later</span></div><p class="control-help">Separates the primary movement of the ball from the later response of the tail.</p></div>
-          <div class="control-group"><label for="overlap"><span>Travelling drag</span><output id="overlapOut">69%</output></label><input id="overlap" type="range" min="0" max="100" value="69"><div class="range-labels"><span>Tracks the ball</span><span>Strong overlap</span></div><p class="control-help">Base, middle and tip inherit progressively older momentum, producing a travelling curl.</p></div>
-        </details>
-        <details class="advanced-controls principle-group" open>
-          <summary><span>Follow-through</span><small>Flexibility & settle</small></summary>
+        <details class="advanced-controls principle-group">
+          <summary><span>Follow-through</span><small>Week 4 · Continue & settle</small></summary>
           <div class="control-group"><label for="flex"><span>Tail flexibility</span><output id="flexOut">91%</output></label><input id="flex" type="range" min="10" max="100" value="91"><div class="range-labels"><span>Rigid</span><span>Flexible</span></div><p class="control-help">Flexible parts continue moving after the ball changes speed or direction.</p></div>
           <div class="control-group"><label for="settle"><span>Landing settle</span><output id="settleOut">5 frames</output></label><input id="settle" type="range" min="2" max="12" value="5"><div class="range-labels"><span>Quick stop</span><span>Extended follow-through</span></div><p class="control-help">After landing, the tail overshoots, passes through neutral and settles last.</p></div>
+        </details>
+        <details class="advanced-controls principle-group">
+          <summary><span>Overlapping action</span><small>Week 4 · Delay & drag</small></summary>
+          <div class="control-group"><label for="delay"><span>Action delay</span><output id="delayOut">3 frames</output></label><input id="delay" type="range" min="0" max="7" value="3"><div class="range-labels"><span>Moves together</span><span>Responds later</span></div><p class="control-help">Separates the primary movement of the ball from the later response of the tail.</p></div>
+          <div class="control-group"><label for="overlap"><span>Travelling drag</span><output id="overlapOut">69%</output></label><input id="overlap" type="range" min="0" max="100" value="69"><div class="range-labels"><span>Tracks the ball</span><span>Strong overlap</span></div><p class="control-help">Base, middle and tip inherit progressively older momentum, producing a travelling curl.</p></div>
         </details>
         <div class="question-card"><span>Ask the room</span><p id="promptText">Which principle is doing the most work in this version of the jump?</p><button id="newPrompt">Another prompt →</button></div>
       </aside>
 
       <article class="lesson-card week4-lesson">
-        <p class="eyebrow">Williams and Blair, in practice</p>
-        <h2 id="lessonTitle">The body leads. The tail catches up.</h2>
-        <p id="lessonCopy">Follow-through is the continuation of flexible parts after the main body changes speed or direction. Track the alternating tail-up, tail-down and passing poses to see how the action travels from the attachment to the tip.</p>
-        <div class="lesson-callout"><span>Try this</span><p id="tryThis">Open Weeks 1–3 principles. Change one setting, then decide whether it clarifies or competes with the Week 4 action.</p></div>
+        <p class="eyebrow">Weeks 1–4 principles in practice</p>
+        <nav class="cumulative-principle-nav" aria-label="Principles covered from Week 1 to Week 4">
+          <button class="tab active" data-focus="squash"><small>W1 · 01</small><span>Squash & stretch</span></button>
+          <button class="tab" data-focus="timing"><small>W1 · 02</small><span>Timing</span></button>
+          <button class="tab" data-focus="spacing"><small>W1 · 03</small><span>Spacing</span></button>
+          <button class="tab" data-focus="arcs"><small>W2 · 04</small><span>Arcs & staging</span></button>
+          <button class="tab" data-focus="anticipation"><small>W3 · 05</small><span>Anticipation</span></button>
+          <button class="tab" data-focus="exaggeration"><small>W3 · 06</small><span>Exaggeration</span></button>
+          <button class="tab" data-focus="follow"><small>W4 · 07</small><span>Follow-through</span></button>
+          <button class="tab" data-focus="overlap"><small>W4 · 08</small><span>Overlapping action</span></button>
+        </nav>
+        <h2 id="lessonTitle">Shape follows force.</h2>
+        <p id="lessonCopy">Squash shows compression at takeoff and impact. Stretch supports fast movement. Preserve the ball’s apparent volume so the changing shape communicates force without changing its mass.</p>
+        <div class="lesson-callout"><span>Try this</span><p id="tryThis">Compare Rubber with Bowling while keeping the timing and path unchanged. Which material can support more deformation?</p></div>
         <p class="source-note">This cumulative exercise combines the earlier ball principles with Richard Williams’ discussion of flexibility and overlapping action, and Preston Blair’s advice that loose parts should arrive at different times.</p>
         <div class="week4-resources"><span>Course resources</span><a href="https://docs.google.com/presentation/d/1iBo5OyaN4sjvoCp92qWSaAlMNOlbYj4q3wPBBEreIAo/edit" target="_blank" rel="noopener">Week 1 slides ↗</a><a href="https://docs.google.com/presentation/d/148BvL4nyMlw9BvBBL7QyGmwcDrSj25bIpliIRhYz2Uc/edit" target="_blank" rel="noopener">Week 2 slides ↗</a><a href="https://docs.google.com/presentation/d/1dPYDbWHvat9S3rlIIbXHi5eNtUsvWwaruVwqFdS7-wc/edit" target="_blank" rel="noopener">Week 3 slides ↗</a><a href="https://echo360.net.au/ui/player/f01b2b96-3ea8-40c0-834a-2ea74f136b1c?secureLinkAccessDataId=1c7d119c-101c-44a6-a5d9-5330bbee1adb&amp;autoplay=false&amp;automute=false" target="_blank" rel="noopener">Week 4 student slide deck ↗</a></div>
         <div class="phase-key"><span><i class="phase-dot primary"></i>Primary action: ball</span><span><i class="phase-dot secondary"></i>Secondary action: tail</span></div>
@@ -106,10 +122,10 @@
       </article>
     </div>
   </main>
-  <footer><span>Jim Picton, CQUniversity · Informed by Richard Williams and Preston Blair</span><span>Week 4 extension · v1.0.0 · Earth gravity 9.81 m/s² · Space pauses · ← → steps frames</span></footer>
+  <footer><span>Jim Picton, CQUniversity · Informed by Richard Williams and Preston Blair</span><span>Week 4 extension · v1.1.1 · Earth gravity 9.81 m/s² · Space pauses · ← → steps frames</span></footer>
   <script src="study-help.js?v=1.0.0"></script>
-  <script src="week4.js?v=1.14.1"></script>
-  <script src="week4-cumulative.js?v=1.0.0"></script>
+  <script src="week4.js?v=1.14.2"></script>
+  <script src="week4-cumulative.js?v=1.1.1"></script>
   <script src="study-help-bindings.js?v=1.0.0"></script>
 </body>
 </html>
