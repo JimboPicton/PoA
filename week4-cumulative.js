@@ -53,8 +53,8 @@ motionAt=function(f){
     state.squash*=shape*exaggeration;
     if(state.landingStretch)state.landingStretch*=shape*exaggeration
   }
-  state.squash=clamp(state.squash,-.72,.82);
-  if(state.landingStretch)state.landingStretch=clamp(state.landingStretch,0,.8);
+  state.squash=clamp(state.squash,-.55,.55);
+  if(state.landingStretch)state.landingStretch=clamp(state.landingStretch,0,.65);
   state.cumulativeEnergy=retained;
   return state
 };
