@@ -6,7 +6,7 @@ An offline-friendly, dependency-free teaching utility for introducing the bounci
 
 Open `activities.html` for the combined Weeks 1–4 activity navigator. It keeps the Weeks 1–2 laboratory controls on one page and links directly to the relevant Week 3 and Week 4 principle demonstrations.
 
-Standalone pages remain available: `index.html` for the Week 1 entry point, `week2.html` for the Arcs & Staging entry point, `week3.html` for anticipation and exaggeration, and `week4.html` for follow-through and overlapping action.
+Standalone pages remain available: `index.html` for the Week 1 entry point, `week2.html` for the Arcs & Staging entry point, `week3.html` for anticipation and exaggeration, and `week4.html` for follow-through and overlapping action. `week4-cumulative.html` provides a second Week 4 activity in which students can combine the principles and animation settings introduced across Weeks 1–4.
 
 ## Run
 
@@ -64,3 +64,4 @@ The study-help panel uses a topic index derived from the full supplied texts of 
 
 - `week3.html` demonstrates a tailless ball anticipating, jumping over a central box, preparing for landing with a progressively angled oval pose, landing and recovering. It includes separate controls for anticipation amount and duration, overall exaggeration, takeoff stretch, landing squash and follow-through recovery. Students can drag the launch marker to rebuild the arc from a nearer or farther starting position, and use Explain motion for labelled quarter-speed study.
 - `week4.html` demonstrates follow-through and overlapping action with a three-section flexible tail. From frame 18, the ball progressively stretches along its descending motion path while the tail attachment follows the transformed ball boundary. It includes collapsible principle groups and material presets.
+- `week4-cumulative.html` duplicates the Week 4 ball-and-tail jump and adds a collapsed cumulative control group for squash and stretch, bounce timing, spacing, retained energy, anticipation, exaggeration and jump-height staging. It deliberately retains a single arc.
