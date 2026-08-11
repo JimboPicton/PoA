@@ -1,4 +1,4 @@
-.activities-page .activity-tabs{display:grid;grid-template-columns:repeat(6,minmax(116px,1fr))}
+.activities-page .activity-tabs{display:grid;grid-template-columns:repeat(7,minmax(104px,1fr))}
 .activities-page .activity-tabs .tab,.activities-page .activity-tabs .activity-link{min-width:0;padding:12px 14px}
 .activity-link{display:block;text-align:left;background:transparent;color:#99a19e;font:700 10px/1.2 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.08em;text-decoration:none}
 .activity-tabs>*+*{border-left:1px solid var(--line)}

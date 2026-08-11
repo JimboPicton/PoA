@@ -1,0 +1,26 @@
+.week5-page main{max-width:1700px}
+.week5-page .week5-tabs{display:grid;grid-template-columns:repeat(4,minmax(115px,1fr))}
+.week5-page .week5-tabs .tab{min-width:115px}
+.week5-page .week5-canvas{background:linear-gradient(#e7f0ed 0 88%,#d8d1bd 88% 89%,#ece3d2 89%)}
+.week5-page .week5-canvas canvas{cursor:default}
+.week5-page .choice-row.three{grid-template-columns:repeat(3,1fr)}
+.week5-page .week5-controls .principle-group summary span{color:var(--teal)}
+.week5-page .week5-controls .principle-group:nth-of-type(3) summary span{color:var(--accent)}
+.week5-page .week5-map-card canvas{height:116px}
+.week5-page .week5-lesson .source-note{line-height:1.55}
+.week5-page .stage-note{max-width:275px}
+@media(min-width:1100px) and (min-height:700px){
+  .week5-page .week4-grid{grid-template-rows:minmax(310px,1fr) 172px}
+  .week5-page .week5-map-card canvas{height:108px}
+  .week5-page .week5-controls .control-group{padding-block:9px 8px}
+  .week5-page .week5-controls .control-help{line-height:1.35}
+  .week5-page .week5-tabs{align-self:center}
+}
+@media(max-width:1280px) and (min-width:1001px){
+  .week5-page .week4-grid{grid-template-columns:270px minmax(0,1fr) 290px}
+  .week5-page .week5-tabs .tab{min-width:96px}
+}
+@media(max-width:760px){
+  .week5-page .week5-tabs{grid-template-columns:repeat(2,1fr)}
+  .week5-page .week5-tabs .tab{min-width:0;border:1px solid var(--line)}
+}

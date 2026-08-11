@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DGTL11001 Week 5 Lab — Flexibility</title>
+  <meta name="description" content="An interactive Week 5 animation lab demonstrating flexibility through a swinging arm, successive breaking of joints, overlapping action and follow-through.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="week4.css">
+  <link rel="stylesheet" href="week5.css">
+  <script src="activity-focus.js?v=1.0.0"></script>
+</head>
+<body class="week4-page week5-page">
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 5 · Flexibility · v1.0.0</span></div></div>
+    <button class="button ghost" id="resetAll">Reset activity</button>
+  </header>
+
+  <main>
+    <section class="intro week4-intro week5-intro">
+      <p class="eyebrow">Standalone interactive demonstration</p>
+      <h1>Let the joints tell the story.</h1>
+      <p class="lede">The shoulder starts the swing. The elbow and wrist respond in succession, turning straight segments into a flexible, flowing action.</p>
+      <div class="principle-tabs week5-tabs" aria-label="Week 5 learning sequence">
+        <button class="tab active" data-focus="arc">01 <span>Arc swing</span></button>
+        <button class="tab" data-focus="break">02 <span>Break joints</span></button>
+        <button class="tab" data-focus="overlap">03 <span>Overlap</span></button>
+        <button class="tab" data-focus="follow">04 <span>Follow-through</span></button>
+      </div>
+    </section>
+
+    <div class="week4-grid week5-grid">
+      <section class="stage-card week4-stage week5-stage">
+        <div class="stage-toolbar">
+          <div><span class="status-dot"></span><span id="motionLabel">Left extreme · direction change</span></div>
+          <div class="toolbar-actions">
+            <label class="toggle"><input type="checkbox" id="arcToggle" checked><span></span>Show arcs</label>
+            <label class="toggle"><input type="checkbox" id="onionToggle"><span></span>Show key poses</label>
+            <label class="toggle"><input type="checkbox" id="explainToggle"><span></span>Explain motion</label>
+            <button class="icon-button" id="fullscreenBtn" aria-label="Expand stage" title="Expand stage">↗</button>
+          </div>
+        </div>
+        <div class="canvas-wrap week4-canvas week5-canvas" id="canvasWrap">
+          <canvas id="stage" aria-label="A simplified arm swinging from the shoulder with delayed elbow, wrist and hand movement"></canvas>
+          <div class="stage-note"><strong id="phaseTitle">DIRECTION CHANGE</strong><span id="phaseNote">The upper arm reverses first. The forearm and hand continue briefly.</span></div>
+        </div>
+        <div class="transport">
+          <button class="play-button" id="playBtn" aria-label="Pause animation">Ⅱ</button>
+          <button class="step-button" id="prevFrame" aria-label="Previous frame">‹</button>
+          <button class="step-button" id="nextFrame" aria-label="Next frame">›</button>
+          <div class="scrubber-wrap"><input id="scrubber" type="range" min="0" max="31" value="0" aria-label="Animation frame"><div class="scrubber-meta"><span id="frameReadout">Frame 01 / 32</span><span id="timeReadout">0.00 s</span></div></div>
+          <button class="button compare" id="compareBtn">Compare rigid arm</button>
+        </div>
+      </section>
+
+      <aside class="controls-card week4-controls week5-controls">
+        <div class="panel-heading"><div><p class="eyebrow">Flexibility controls</p><h2>Swing response</h2></div><button class="text-button" id="resetControls">Reset</button></div>
+        <div class="control-group"><label><span>Frame rate</span><output id="fpsOut">12 fps</output></label><div class="choice-row"><button class="choice active" data-fps="12">12 fps</button><button class="choice" data-fps="24">24 fps</button></div></div>
+        <div class="control-group"><label><span>Playback speed</span><output id="speedOut">Normal</output></label><div class="choice-row three"><button class="choice" data-speed="0.25">¼ speed</button><button class="choice" data-speed="0.5">½ speed</button><button class="choice active" data-speed="1">Normal</button></div></div>
+
+        <details class="advanced-controls principle-group" open>
+          <summary><span>Arc & pendulum</span><small>Path, timing & spacing</small></summary>
+          <div class="control-group"><label for="amplitude"><span>Swing arc</span><output id="amplitudeOut">58°</output></label><input id="amplitude" type="range" min="25" max="82" value="58"><div class="range-labels"><span>Small arc</span><span>Broad arc</span></div><p class="control-help">Sets the two extremes of the shoulder-led pendulum action.</p></div>
+          <div class="control-group"><label for="duration"><span>Swing timing</span><output id="durationOut">2.60 s</output></label><input id="duration" type="range" min="160" max="420" value="260"><div class="range-labels"><span>Quick</span><span>Slow</span></div><p class="control-help">Changes the duration without removing the slower spacing at each extreme.</p></div>
+          <div class="control-group"><label for="pendulum"><span>Pendulum spacing</span><output id="pendulumOut">86%</output></label><input id="pendulum" type="range" min="0" max="100" value="86"><div class="range-labels"><span>Even</span><span>Slow at extremes</span></div><p class="control-help">Clusters drawings near each reversal and opens the spacing through the centre.</p></div>
+        </details>
+
+        <details class="advanced-controls principle-group" open>
+          <summary><span>Breaking the joints</span><small>Elbow & wrist bends</small></summary>
+          <div class="control-group"><label for="elbowBreak"><span>Elbow break</span><output id="elbowBreakOut">72%</output></label><input id="elbowBreak" type="range" min="0" max="100" value="72"><div class="range-labels"><span>Rigid</span><span>Clear break</span></div><p class="control-help">Lets the forearm continue while the upper arm begins to reverse.</p></div>
+          <div class="control-group"><label for="elbowDelay"><span>Elbow delay</span><output id="elbowDelayOut">2 frames</output></label><input id="elbowDelay" type="range" min="0" max="6" value="2"><div class="range-labels"><span>Together</span><span>Later</span></div><p class="control-help">Offsets the forearm from the shoulder-led movement.</p></div>
+          <div class="control-group"><label for="wristFlex"><span>Wrist flexibility</span><output id="wristFlexOut">78%</output></label><input id="wristFlex" type="range" min="0" max="100" value="78"><div class="range-labels"><span>Locked</span><span>Flexible</span></div><p class="control-help">Allows the hand to peel through the direction change after the elbow.</p></div>
+        </details>
+
+        <details class="advanced-controls principle-group" open>
+          <summary><span>Overlap & follow-through</span><small>Successive arrival</small></summary>
+          <div class="control-group"><label for="wristDelay"><span>Hand delay</span><output id="wristDelayOut">4 frames</output></label><input id="wristDelay" type="range" min="0" max="9" value="4"><div class="range-labels"><span>Moves together</span><span>Arrives last</span></div><p class="control-help">The hand inherits older movement, so the joints do not reverse on one frame.</p></div>
+          <div class="control-group"><label for="follow"><span>Follow-through</span><output id="followOut">68%</output></label><input id="follow" type="range" min="0" max="100" value="68"><div class="range-labels"><span>Subtle</span><span>Strong overshoot</span></div><p class="control-help">Controls how far the lower arm and hand continue after the shoulder changes direction.</p></div>
+        </details>
+
+        <div class="question-card"><span>Ask the room</span><p id="promptText">At the reversal, which joint changes direction first—and which arrives last?</p><button id="newPrompt">Another prompt →</button></div>
+      </aside>
+
+      <article class="lesson-card week4-lesson week5-lesson">
+        <p class="eyebrow">Williams, in practice</p>
+        <h2 id="lessonTitle">The path is curved; the timing is pendular.</h2>
+        <p id="lessonCopy">A shoulder swing travels on an arc. Pendulum spacing slows the arm into each extreme, then lets it move fastest through the centre.</p>
+        <div class="lesson-callout"><span>Try this</span><p id="tryThis">Reduce Pendulum spacing to zero, then restore it. Compare the mechanical reversal with the eased swing.</p></div>
+        <p class="source-note">Study alongside Richard Williams’ discussion of flexibility and successive breaking of joints, printed pp. 231–245 (PDF pp. 236–250), and the Week 5 presentation, slides 49–57.</p>
+        <div class="week4-resources"><span>Week 5 resources</span><a href="https://docs.google.com/presentation/d/1mduT3Og7ZodybEchkYwLpJR5BoPxZeElhpUqs7jSGwY/edit?slide=id.g1e831988ac_0_19#slide=id.g1e831988ac_0_19" target="_blank" rel="noopener">Week 5 student slides 49–57 ↗</a></div>
+        <div class="phase-key"><span><i class="phase-dot primary"></i>Primary action: upper arm</span><span><i class="phase-dot secondary"></i>Delayed action: forearm & hand</span></div>
+        <div class="integrated-question week4-question" aria-labelledby="week5QuestionTitle">
+          <p class="eyebrow">Resource-grounded study help</p>
+          <h3 id="week5QuestionTitle">Have a question?</h3>
+          <p>Ask about principles and animation practice across Weeks 1–5 and the supplied Williams and Blair texts.</p>
+          <form class="question-form" id="week5QuestionForm">
+            <label for="week5Question">Your question</label>
+            <div class="question-entry"><input id="week5Question" type="text" autocomplete="off" placeholder="Ask about flexibility or breaking joints…" required><button class="button" type="submit">Ask</button></div>
+            <div class="source-answer hidden" id="week5Answer" aria-live="polite"><strong>Week 5 answer</strong><span></span><div class="answer-resources" id="week5AnswerResources"></div></div>
+          </form>
+        </div>
+      </article>
+
+      <article class="spacing-card week4-map-card week5-map-card">
+        <div class="card-heading"><div><p class="eyebrow">Action breakdown</p><h2>See the successive delay</h2></div><div class="legend"><span><i class="dot fast"></i>Upper arm</span><span><i class="dot slow"></i>Forearm / hand</span></div></div>
+        <canvas id="actionMap" aria-label="Timeline comparing shoulder, elbow and hand direction changes"></canvas>
+        <p class="caption">The shoulder establishes the beat. The elbow and hand reach the same directional events on later frames.</p>
+      </article>
+    </div>
+  </main>
+  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams and Preston Blair</span><span>Week 5 · v1.0.0 · Space pauses · ← → steps frames</span></footer>
+  <script src="study-help.js?v=1.1.0"></script>
+  <script src="week5.js?v=1.0.0"></script>
+  <script src="study-help-bindings.js?v=1.1.0"></script>
+</body>
+</html>

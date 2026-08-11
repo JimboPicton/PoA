@@ -6,6 +6,7 @@
     week2: ['Week 2 student slides', 'https://docs.google.com/presentation/d/148BvL4nyMlw9BvBBL7QyGmwcDrSj25bIpliIRhYz2Uc/edit?slide=id.gb1fca5a94a_0_56#slide=id.gb1fca5a94a_0_56'],
     week3: ['Week 3 student slides', 'https://docs.google.com/presentation/d/1dPYDbWHvat9S3rlIIbXHi5eNtUsvWwaruVwqFdS7-wc/edit?slide=id.gc6f73a04f_0_0#slide=id.gc6f73a04f_0_0'],
     week4: ['Week 4 student slide deck', 'https://echo360.net.au/ui/player/f01b2b96-3ea8-40c0-834a-2ea74f136b1c?secureLinkAccessDataId=1c7d119c-101c-44a6-a5d9-5330bbee1adb&autoplay=false&automute=false'],
+    week5: ['Week 5 student slides 49–57', 'https://docs.google.com/presentation/d/1mduT3Og7ZodybEchkYwLpJR5BoPxZeElhpUqs7jSGwY/edit?slide=id.g1e831988ac_0_19#slide=id.g1e831988ac_0_19'],
     blair: ['Preston Blair on O’Reilly', 'https://www.oreilly.com/library/view/cartoon-animation-with/9781633228917/'],
     slow: ['Animation Mentor: slow in and slow out', 'https://www.animationmentor.com/blog/slow-in-and-slow-out-the-12-basic-principles-of-animation/'],
     squash: ['Animation Mentor: squash and stretch', 'https://www.animationmentor.com/blog/squash-and-stretch-the-12-basic-principles-of-animation/page/25/?et_blog=&targetCategory=All'],
@@ -13,6 +14,13 @@
   };
 
   const topics = [
+    {
+      match: q => /flexib|break(?:ing)? (?:the )?joints?|arm swing|swinging arm|pendulum|elbow|forearm|wrist/.test(q),
+      title: 'Flexibility comes from successive joint action',
+      source: 'Williams printed pp. 231–245 (PDF pp. 236–250); Week 5 slides 49–57',
+      text: 'The shoulder begins the arm swing. The forearm follows, and the hand follows after that. When the upper arm reverses first, the lower arm briefly continues in the old direction, creating a visible bend—or “break”—at the elbow.\n\nThe delay should travel through the joints in sequence. This produces a flowing curve from straight arm segments while the whole arm remains connected. Pendulum spacing also matters: the arm slows near each extreme and moves fastest through the centre.\n\nIn Week 5, compare the flexible arm with the rigid-arm overlay, then adjust the elbow and hand delays one at a time.',
+      resources: ['week5', 'blair']
+    },
     {
       match: q => /timing/.test(q) && /spacing/.test(q),
       title: 'Timing and spacing — related, but different',
@@ -110,7 +118,9 @@
     const q = String(question || '').trim().toLowerCase();
     const topic = topics.find(item => item.match(q));
     if (topic) return { title: topic.title, source: topic.source, text: topic.text, resources: topic.resources.map(key => links[key]) };
-    const current = context.activity === 'week4'
+    const current = context.activity === 'week5'
+      ? 'In this activity, identify the shoulder as the source of action, then follow the delayed response through the elbow, wrist and hand.'
+      : context.activity === 'week4'
       ? 'In this activity, identify the ball as the primary action and the tail as the delayed secondary action.'
       : context.activity === 'week3'
         ? 'In this activity, identify the preparation, main jump and landing reaction.'
