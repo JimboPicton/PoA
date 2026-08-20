@@ -4,9 +4,9 @@ Current version: **2.9.2**
 
 An offline-friendly, dependency-free teaching utility for introducing the bouncing ball through timing, spacing, slow in/out, squash/stretch, anticipation, exaggeration, and follow-through.
 
-Open `activities.html` for the combined Weeks 1–5 activity navigator. It keeps the Weeks 1–2 laboratory controls on one page and links directly to the relevant Week 3, Week 4 and Week 5 principle demonstrations.
+Open `activities.html` for the combined Weeks 1–6 activity navigator. It keeps the Weeks 1–2 laboratory controls on one page and links directly to the relevant Week 3, Week 4, Week 5 and Week 6 principle demonstrations.
 
-Standalone pages remain available: `index.html` for the Week 1 entry point, `week2.html` for the Arcs & Staging entry point, `week3.html` for anticipation and exaggeration, `week4.html` for follow-through and overlapping action, and `week5.html` for flexibility through a swinging arm. `week4-cumulative.html` provides a second Week 4 activity in which students can combine the principles and animation settings introduced across Weeks 1–4.
+Standalone pages remain available: `index.html` for the Week 1 entry point, `week2.html` for the Arcs & Staging entry point, `week3.html` for anticipation and exaggeration, `week4.html` for follow-through and overlapping action, `week5.html` for flexibility through a swinging arm, and `week6.html` for the Williams walk cycle. `week4-cumulative.html` provides a second Week 4 activity in which students can combine the principles and animation settings introduced across Weeks 1–4.
 
 ## Run
 
@@ -66,4 +66,5 @@ The study-help panel uses a topic index derived from the full supplied texts of 
 - `week4.html` demonstrates follow-through and overlapping action with a three-section flexible tail. From frame 18, the ball progressively stretches along its descending motion path while the tail attachment follows the transformed ball boundary. It includes collapsible principle groups and material presets.
 - `week4-cumulative.html` duplicates the Week 4 ball-and-tail jump and presents each Week 1–4 principle as a separate collapsed control group: squash and stretch, timing, spacing, arcs and staging, anticipation, exaggeration, follow-through and overlapping action. Its right-hand panel provides matching theory briefs in teaching sequence. The activity deliberately retains a single arc.
 - `week5.html` demonstrates flexibility with a connected shoulder, elbow, wrist and hand. Students can adjust the pendulum arc and timing, spacing at the extremes, successive elbow and hand delays, the amount of joint breaking and follow-through, compare against a rigid arm, and reveal accurate key poses and labelled motion.
+- `week6.html` demonstrates the walk cycle through connected contact, down, passing and up positions. Students can adjust the step beat, stride, pendulum spacing, body-level change, forward lean, knee and foot articulation, opposing arm swing and hand follow-through; reveal the four key positions; and compare the result with a rigid walk.
 - Week 4 ball positions use the complete transformed outline—including squash, stretch, rotation and scaled stroke width—for collision clearance, keeping the ball above the solid box and ground surfaces at extreme control settings. Reciprocal squash-and-stretch scaling preserves the ball’s apparent area, maintaining its volumetric relationship with the attached tail.

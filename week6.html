@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DGTL11001 Week 6 Lab — Walks</title>
+  <meta name="description" content="An interactive Week 6 animation lab demonstrating the contact, down, passing and up positions of a walk cycle.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="week4.css">
+  <link rel="stylesheet" href="week6.css">
+  <script src="activity-focus.js?v=1.0.0"></script>
+</head>
+<body class="week4-page week6-page">
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><strong>DGTL11001 Foundations of Animation: Principles of Animation Lab</strong><span>Week 6 · Walks · v1.0.0</span></div></div>
+    <button class="button ghost" id="resetAll">Reset activity</button>
+  </header>
+
+  <main>
+    <section class="intro week4-intro week6-intro">
+      <p class="eyebrow">Standalone interactive demonstration</p>
+      <h1>Make every step carry weight.</h1>
+      <p class="lede">Build a walk from contact, down, passing and up poses. Then adjust the beat, body rise and fall, joint action and opposing arm swing.</p>
+      <div class="principle-tabs week6-tabs" aria-label="Week 6 walk positions">
+        <button class="tab active" data-focus="contact">01 <span>Contact</span></button>
+        <button class="tab" data-focus="down">02 <span>Down</span></button>
+        <button class="tab" data-focus="passing">03 <span>Passing</span></button>
+        <button class="tab" data-focus="up">04 <span>Up</span></button>
+      </div>
+    </section>
+
+    <div class="week4-grid week6-grid">
+      <section class="stage-card week4-stage week6-stage">
+        <div class="stage-toolbar">
+          <div><span class="status-dot"></span><span id="motionLabel">Contact · the next step begins</span></div>
+          <div class="toolbar-actions">
+            <label class="toggle"><input type="checkbox" id="pathToggle" checked><span></span>Show paths</label>
+            <label class="toggle"><input type="checkbox" id="posesToggle"><span></span>Show positions</label>
+            <label class="toggle"><input type="checkbox" id="explainToggle"><span></span>Explain motion</label>
+            <button class="icon-button" id="fullscreenBtn" aria-label="Expand stage" title="Expand stage">↗</button>
+          </div>
+        </div>
+        <div class="canvas-wrap week4-canvas week6-canvas" id="canvasWrap">
+          <canvas id="stage" aria-label="A simplified connected figure demonstrating a walk cycle"></canvas>
+          <div class="stage-note"><strong id="phaseTitle">CONTACT</strong><span id="phaseNote">The legs are at their widest. One heel meets the ground as the opposite foot pushes away.</span></div>
+        </div>
+        <div class="transport">
+          <button class="play-button" id="playBtn" aria-label="Pause animation">Ⅱ</button>
+          <button class="step-button" id="prevFrame" aria-label="Previous frame">‹</button>
+          <button class="step-button" id="nextFrame" aria-label="Next frame">›</button>
+          <div class="scrubber-wrap"><input id="scrubber" type="range" min="0" max="23" value="0" aria-label="Animation frame"><div class="scrubber-meta"><span id="frameReadout">Frame 01 / 24</span><span id="timeReadout">0.00 s</span></div></div>
+          <button class="button compare" id="compareBtn">Compare rigid walk</button>
+        </div>
+      </section>
+
+      <aside class="controls-card week4-controls week6-controls">
+        <div class="panel-heading"><div><p class="eyebrow">Walk-cycle controls</p><h2>Weight & rhythm</h2></div><button class="text-button" id="resetControls">Reset</button></div>
+        <div class="preset-row week6-presets" aria-label="Walk presets"><button class="preset active" data-preset="natural">Natural</button><button class="preset" data-preset="light">Light</button><button class="preset" data-preset="heavy">Heavy</button></div>
+        <div class="control-group"><label><span>Frame rate</span><output id="fpsOut">12 fps</output></label><div class="choice-row"><button class="choice active" data-fps="12">12 fps</button><button class="choice" data-fps="24">24 fps</button></div></div>
+        <div class="control-group"><label><span>Playback speed</span><output id="speedOut">Normal</output></label><div class="choice-row three"><button class="choice" data-speed="0.25">¼ speed</button><button class="choice" data-speed="0.5">½ speed</button><button class="choice active" data-speed="1">Normal</button></div></div>
+
+        <details class="advanced-controls principle-group" open>
+          <summary><span>Timing & stride</span><small>Beat and reach</small></summary>
+          <div class="control-group"><label for="tempo"><span>Step timing</span><output id="tempoOut">0.50 s</output></label><input id="tempo" type="range" min="32" max="90" value="50"><div class="range-labels"><span>Quick</span><span>Slow</span></div><p class="control-help">Sets the beat from one contact drawing to the next.</p></div>
+          <div class="control-group"><label for="stride"><span>Stride length</span><output id="strideOut">64%</output></label><input id="stride" type="range" min="30" max="95" value="64"><div class="range-labels"><span>Short</span><span>Long</span></div><p class="control-help">Spreads the contact pose while keeping each foot connected to its leg.</p></div>
+          <div class="control-group"><label for="spacing"><span>Pendulum spacing</span><output id="spacingOut">78%</output></label><input id="spacing" type="range" min="0" max="100" value="78"><div class="range-labels"><span>Even</span><span>Clear accents</span></div><p class="control-help">Slows into the contacts and opens the spacing through the passing action.</p></div>
+        </details>
+
+        <details class="advanced-controls principle-group" open>
+          <summary><span>Weight & body level</span><small>Down, passing and up</small></summary>
+          <div class="control-group"><label for="down"><span>Down position</span><output id="downOut">66%</output></label><input id="down" type="range" min="10" max="100" value="66"><div class="range-labels"><span>Shallow</span><span>Weighted</span></div><p class="control-help">Drops the pelvis just after contact as the front leg accepts the body weight.</p></div>
+          <div class="control-group"><label for="up"><span>Up position</span><output id="upOut">56%</output></label><input id="up" type="range" min="0" max="100" value="56"><div class="range-labels"><span>Level</span><span>Lifted</span></div><p class="control-help">Lets the supporting leg push the body upward after the passing position.</p></div>
+          <div class="control-group"><label for="lean"><span>Forward lean</span><output id="leanOut">5°</output></label><input id="lean" type="range" min="-4" max="16" value="5"><div class="range-labels"><span>Upright</span><span>Committed</span></div><p class="control-help">Clarifies the controlled fall that carries the walk forward.</p></div>
+        </details>
+
+        <details class="advanced-controls principle-group" open>
+          <summary><span>Breaking joints</span><small>Knees, feet & arms</small></summary>
+          <div class="control-group"><label for="knee"><span>Knee flexibility</span><output id="kneeOut">72%</output></label><input id="knee" type="range" min="0" max="100" value="72"><div class="range-labels"><span>Stiff</span><span>Flexible</span></div><p class="control-help">Bends the swing leg to clear the ground and softens weight acceptance.</p></div>
+          <div class="control-group"><label for="foot"><span>Foot roll</span><output id="footOut">70%</output></label><input id="foot" type="range" min="0" max="100" value="70"><div class="range-labels"><span>Flat</span><span>Heel to toe</span></div><p class="control-help">Moves the contact from heel to flat foot, then through the toe push-off.</p></div>
+          <div class="control-group"><label for="arms"><span>Opposing arm swing</span><output id="armsOut">62%</output></label><input id="arms" type="range" min="0" max="100" value="62"><div class="range-labels"><span>Quiet</span><span>Clear counter-swing</span></div><p class="control-help">Balances each leg with the arm on the opposite side.</p></div>
+          <div class="control-group"><label for="overlap"><span>Hand follow-through</span><output id="overlapOut">2 frames</output></label><input id="overlap" type="range" min="0" max="5" value="2"><div class="range-labels"><span>Together</span><span>Delayed</span></div><p class="control-help">Keeps the hands moving briefly after the upper arms begin to reverse.</p></div>
+        </details>
+        <div class="question-card"><span>Ask the room</span><p id="promptText">Which position carries the body lowest—and why does it occur after contact?</p><button id="newPrompt">Another prompt →</button></div>
+      </aside>
+
+      <article class="lesson-card week4-lesson week6-lesson">
+        <p class="eyebrow">Williams, in practice</p>
+        <h2 id="lessonTitle">Contact establishes the step.</h2>
+        <p id="lessonCopy">The legs reach their widest separation at contact. The forward heel arrives as the rear foot finishes pushing away.</p>
+        <div class="lesson-callout"><span>Try this</span><p id="tryThis">Pause on Contact, then step to Down. Watch the pelvis accept the weight only after the foot has met the ground.</p></div>
+        <p class="source-note">Study alongside Richard Williams’ walk-cycle discussion, printed pp. 102–166, and the Week 6 presentation, slides 42–54.</p>
+        <div class="week4-resources"><span>Week 6 resources</span><a href="https://docs.google.com/presentation/d/1V0X8IKiwUPBELNMBlF7HGB6CvM0l37p2tb1QsxDIZC8/edit?slide=id.g239b3d9119_0_269#slide=id.g239b3d9119_0_269" target="_blank" rel="noopener">Week 6 student slides 42–54 ↗</a><a href="https://www.youtube.com/watch?v=cmZyLPqYtL4" target="_blank" rel="noopener">Richard Williams explains the walk cycle ↗</a></div>
+        <div class="phase-key"><span><i class="phase-dot primary"></i>Body level and weight</span><span><i class="phase-dot secondary"></i>Feet, knees and opposing arms</span></div>
+        <div class="integrated-question week4-question" aria-labelledby="week6QuestionTitle">
+          <p class="eyebrow">Resource-grounded study help</p><h3 id="week6QuestionTitle">Have a question?</h3>
+          <p>Ask about walk cycles or animation principles across Weeks 1–6 and the supplied Williams and Blair texts.</p>
+          <form class="question-form" id="week6QuestionForm"><label for="week6Question">Your question</label><div class="question-entry"><input id="week6Question" type="text" autocomplete="off" placeholder="Ask about contact, passing or weight…" required><button class="button" type="submit">Ask</button></div><div class="source-answer hidden" id="week6Answer" aria-live="polite"><strong>Week 6 answer</strong><span></span><div class="answer-resources" id="week6AnswerResources"></div></div></form>
+        </div>
+      </article>
+
+      <article class="spacing-card week4-map-card week6-map-card">
+        <div class="card-heading"><div><p class="eyebrow">Walk-cycle breakdown</p><h2>Read the repeating positions</h2></div><div class="legend"><span><i class="dot fast"></i>Contact</span><span><i class="dot slow"></i>Breakdown</span></div></div>
+        <canvas id="actionMap" aria-label="Timeline showing contact, down, passing and up positions in a walk cycle"></canvas>
+        <p class="caption">Contact sets the beat. Down accepts weight, Passing transfers it over one leg, and Up prepares the next controlled fall.</p>
+      </article>
+    </div>
+  </main>
+  <footer><span>Jim Picton, CQUniversity · Informed by the work of Richard Williams and Preston Blair</span><span>Week 6 · v1.0.0 · Space pauses · ← → steps frames</span></footer>
+  <script src="study-help.js?v=1.2.0"></script>
+  <script src="week6.js?v=1.0.0"></script>
+  <script src="study-help-bindings.js?v=1.2.0"></script>
+</body>
+</html>
+

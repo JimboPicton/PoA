@@ -7,6 +7,8 @@
     week3: ['Week 3 student slides', 'https://docs.google.com/presentation/d/1dPYDbWHvat9S3rlIIbXHi5eNtUsvWwaruVwqFdS7-wc/edit?slide=id.gc6f73a04f_0_0#slide=id.gc6f73a04f_0_0'],
     week4: ['Week 4 student slide deck', 'https://echo360.net.au/ui/player/f01b2b96-3ea8-40c0-834a-2ea74f136b1c?secureLinkAccessDataId=1c7d119c-101c-44a6-a5d9-5330bbee1adb&autoplay=false&automute=false'],
     week5: ['Week 5 student slides 49–57', 'https://docs.google.com/presentation/d/1mduT3Og7ZodybEchkYwLpJR5BoPxZeElhpUqs7jSGwY/edit?slide=id.g1e831988ac_0_19#slide=id.g1e831988ac_0_19'],
+    week6: ['Week 6 student slides 42–54', 'https://docs.google.com/presentation/d/1V0X8IKiwUPBELNMBlF7HGB6CvM0l37p2tb1QsxDIZC8/edit?slide=id.g239b3d9119_0_269#slide=id.g239b3d9119_0_269'],
+    walkVideo: ['Richard Williams explains the walk cycle', 'https://www.youtube.com/watch?v=cmZyLPqYtL4'],
     blair: ['Preston Blair on O’Reilly', 'https://www.oreilly.com/library/view/cartoon-animation-with/9781633228917/'],
     slow: ['Animation Mentor: slow in and slow out', 'https://www.animationmentor.com/blog/slow-in-and-slow-out-the-12-basic-principles-of-animation/'],
     squash: ['Animation Mentor: squash and stretch', 'https://www.animationmentor.com/blog/squash-and-stretch-the-12-basic-principles-of-animation/page/25/?et_blog=&targetCategory=All'],
@@ -14,6 +16,13 @@
   };
 
   const topics = [
+    {
+      match: q => /walk cycle|walking|contact pose|down position|passing position|up position|heel strike|foot roll|controlled fall|\bcontact\b.*\bdown\b|\bdown\b.*\bcontact\b/.test(q),
+      title: 'A walk is organised around four repeating positions',
+      source: 'Williams printed pp. 102–166; Week 6 slides 42–54',
+      text: 'Begin with Contact: the legs are at their widest and the forward heel meets the ground. Down follows after contact as the front leg accepts the weight and the pelvis reaches its lowest point. At Passing, the free foot passes the supporting leg and the body returns towards its median height. Up comes after passing, when the supporting leg pushes the pelvis higher and forward into the next controlled fall.\n\nThe arms swing opposite the legs to balance the action. Keep the feet close to the ground, preserve a clear body-level path, and make the two contacts establish the beat.\n\nIn Week 6, turn on Show positions, then change one control at a time so you can see which drawing—not just which limb—has changed.',
+      resources: ['week6', 'walkVideo']
+    },
     {
       match: q => /flexib|break(?:ing)? (?:the )?joints?|arm swing|swinging arm|pendulum|elbow|forearm|wrist/.test(q),
       title: 'Flexibility comes from successive joint action',
@@ -118,7 +127,9 @@
     const q = String(question || '').trim().toLowerCase();
     const topic = topics.find(item => item.match(q));
     if (topic) return { title: topic.title, source: topic.source, text: topic.text, resources: topic.resources.map(key => links[key]) };
-    const current = context.activity === 'week5'
+    const current = context.activity === 'week6'
+      ? 'In this activity, identify Contact, Down, Passing and Up, then follow the weight through the pelvis, supporting leg, feet and opposing arms.'
+      : context.activity === 'week5'
       ? 'In this activity, identify the shoulder as the source of action, then follow the delayed response through the elbow, wrist and hand.'
       : context.activity === 'week4'
       ? 'In this activity, identify the ball as the primary action and the tail as the delayed secondary action.'
